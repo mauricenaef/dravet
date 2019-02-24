@@ -1,0 +1,33 @@
+# Translation of Plugins - Organic Profile Block - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Organic Profile Block - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-02-04 14:16:42+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Organic Profile Block - Stable (latest release)\n"
+
+#. Author of the plugin/theme
+msgid "Organic Themes"
+msgstr "Organic Themes"
+
+#. Description of the plugin/theme
+msgid "The Profile Block is created for the Gutenberg content editor. It displays a profile section with an image, name, subtitle, bio and personal social media links. It's perfect for author biographies, personal profiles, or staff pages."
+msgstr "Der„Profile Block“ wurde für den Gutenberg Content Editor erstellt. Mit ihm lässt sich ein Abschnitt für ein Profil mit Bild, Name, Untertitel, Bio- und persönlichen Social Media Links darstellen. Er eignet sich perfekt für Autorenbiographien, persönliche Profile oder Mitarbeiterseiten."
+
+#. #-#-#-#-#  organic-profile-block-code.pot (Organic Profile Block 1.2) 
+#. #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  organic-profile-block-code.pot (Organic Profile Block 1.2) 
+#. #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://organicthemes.com/"
+msgstr "https://organicthemes.com/"
+
+#. Plugin Name of the plugin/theme
+msgid "Organic Profile Block"
+msgstr "Organic Profile Block"
