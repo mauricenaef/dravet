@@ -4783,6 +4783,7 @@ input[type="submit"] {
 .site-footer .menu {
   margin-bottom: 1em; }
   .site-footer .menu a {
+    line-height: 1.5;
     padding-bottom: .25rem;
     padding-top: .25rem; }
 

@@ -35,6 +35,7 @@
 	.menu {
 		margin-bottom: 1em;
 		a {
+			line-height: $global-lineheight;
 			padding-bottom: .25rem;
 			padding-top: .25rem;
 		}
