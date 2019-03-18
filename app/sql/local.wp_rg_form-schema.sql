@@ -8,4 +8,4 @@ CREATE TABLE `wp_rg_form` (
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `is_trash` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

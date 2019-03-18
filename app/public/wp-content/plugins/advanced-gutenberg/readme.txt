@@ -1,9 +1,9 @@
 === Advanced Gutenberg ===
 Contributors: JoomUnited
 Tags: gutenberg, gutenberg blocks, advanced gutenberg, editor, blocks
-Requires at least: 4.9
+Requires at least: 5.0
 Tested up to: 5.1.0
-Stable tag: 1.10.3
+Stable tag: 1.10.4
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -136,6 +136,9 @@ The Advanced Gutenberg Custom CSS can be created from the plugin configuration a
 1. Latest posts and WooCommerce products blocks
 
 == Changelog ==
+
+= 1.10.4 =
+ * Fix : Blocks validation error on multisite and author users
 
 = 1.10.3 =
  * Fix : Compatibility with Wordpress 5.1.0
@@ -332,4 +335,4 @@ Update through the automatic WordPress updater, all Advanced Gutenberg content a
 
 == Requirements ==
 
-PHP 5.6+, 7, 7.1, 7.2 & 7.3 recommended for better performance, WordPress 4.9+
+PHP 5.6+, 7, 7.1, 7.2 & 7.3 recommended for better performance, WordPress 5.0+

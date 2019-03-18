@@ -152,7 +152,7 @@ class ThemeRepository
 
         $model = new PackageModel(array(
             'package' => $theme->stylesheet,
-            'repository' => $theme->repository,
+            'repository' => (string) $theme->repository,
             'branch' => $theme->repository->getBranch(),
             'status' => 1,
             'host' => $theme->repository->code,

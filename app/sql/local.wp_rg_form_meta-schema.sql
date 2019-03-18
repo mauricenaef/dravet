@@ -8,4 +8,4 @@ CREATE TABLE `wp_rg_form_meta` (
   `confirmations` longtext COLLATE utf8mb4_unicode_520_ci,
   `notifications` longtext COLLATE utf8mb4_unicode_520_ci,
   PRIMARY KEY (`form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

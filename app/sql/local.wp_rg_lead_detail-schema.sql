@@ -12,4 +12,4 @@ CREATE TABLE `wp_rg_lead_detail` (
   KEY `lead_id` (`lead_id`),
   KEY `lead_field_number` (`lead_id`,`field_number`),
   KEY `lead_field_value` (`value`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

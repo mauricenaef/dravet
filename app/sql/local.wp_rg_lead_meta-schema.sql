@@ -11,4 +11,4 @@ CREATE TABLE `wp_rg_lead_meta` (
   KEY `meta_key` (`meta_key`(191)),
   KEY `lead_id` (`lead_id`),
   KEY `form_id_meta_key` (`form_id`,`meta_key`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;

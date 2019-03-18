@@ -4,6 +4,9 @@
 # Build modules
 /node_modules/
 
+# App folder
+/app/
+
 # Composer packages
 /vendor/
 

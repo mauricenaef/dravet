@@ -165,7 +165,7 @@ class PluginRepository
 
         $model = new PackageModel(array(
             'package' => $plugin->file,
-            'repository' => $plugin->repository,
+            'repository' => (string) $plugin->repository,
             'branch' => $plugin->repository->getBranch(),
             'status' => 1,
             'host' => $plugin->repository->code,

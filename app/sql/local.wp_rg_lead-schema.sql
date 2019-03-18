@@ -24,4 +24,4 @@ CREATE TABLE `wp_rg_lead` (
   PRIMARY KEY (`id`),
   KEY `form_id` (`form_id`),
   KEY `status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
