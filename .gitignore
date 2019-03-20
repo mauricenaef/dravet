@@ -5,7 +5,7 @@
 /node_modules/
 
 # App folder
-/app/
+/app
 
 # Composer packages
 /vendor/
