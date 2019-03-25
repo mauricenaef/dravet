@@ -39,7 +39,6 @@ Header and Footer scripts
 
 var headerJS = [
 	'node_modules/jquery/dist/jquery.js',
-	'node_modules/webfontloader/webfontloader.js',
 	'src/js/header/**'
 ];
 var footerJS = [
