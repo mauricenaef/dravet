@@ -1,0 +1,39 @@
+[class*=" icon"], [class^=icon] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    line-height: 1;
+    position: relative;
+    top: -.05em;
+    vertical-align: middle;
+    svg {
+        height:1em;
+        width:1em;
+    }
+    &.svg-baseline svg {
+        bottom: -0.125em;
+    position: absolute;
+    }
+}
+.has-icons-left,
+.has-icons-right {
+        svg {
+            padding: .4rem;
+        }
+    }
+    .has-icons-right {
+        svg {
+            margin-right: .3rem;
+            padding-left: .5rem;
+        }
+    }
+    .has-icons-left {
+        
+        svg {
+            margin-left: .3rem;
+            padding-right: .5rem;
+        }
+    }

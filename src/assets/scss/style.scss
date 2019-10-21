@@ -1,0 +1,144 @@
+@charset 'utf-8';
+/*!  
+Theme Name: Dravet Syndrom 2019
+Theme URI: http://dravet.ch
+Version: 1.5.0
+Description: Custom Theme entwickelt von <a href="https://mauricenaef.ch">MAURICE NAEF webdesigner</a> für den exklusiven gebrauch dieser Seite.
+Author: MAURICE NAEF webdesigner
+Author URI: https://mauricenaef.ch
+Tags: 
+
+	Copyright: (c) 2007-2017 MAURICE NAEF webdesigner.
+	Lizenz: GNU General Public License v2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	AGB Link: https://mauricenaef.ch/agb
+
+*/
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// Set your brand colors
+$dark-brown:  hsl(241, 30%, 31%);
+$green: hsl(94, 42%, 58%);
+$light-brown: hsl(0, 0%, 50%);
+$beige-light: hsl(120, 3%, 94%);
+$beige-lighter: hsl(0, 0%, 76%);
+$dark-blue: hsl(219, 100%, 24%);
+
+// Update Bulma's global variables
+$family-sans-serif: "Open Sans", sans-serif;
+$grey-dark: $light-brown;
+$grey-light: $beige-light;
+$primary: $dark-brown;
+$link: $green;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+
+// Utils
+@import "../../../node_modules/bulma/sass/utilities/_all.sass";
+//@import "../../../node_modules/bulma/sass/utilities/initial-variables.sass";
+//@import "../../../node_modules/bulma/sass/utilities/functions.sass";
+//@import "../../../node_modules/bulma/sass/utilities/derived-variables.sass";
+//@import "../../../node_modules/bulma/sass/utilities/animations.sass";
+//@import "../../../node_modules/bulma/sass/utilities/mixins.sass";
+//@import "../../../node_modules/bulma/sass/utilities/controls.sass";
+
+$navbar-breakpoint: $tablet;
+
+// Base
+@import "../../../node_modules/bulma/sass/base/_all.sass";
+//@import "../../../node_modules/bulma/sass/base/minireset.sass";
+//@import "../../../node_modules/bulma/sass/base/generic.sass";
+//@import "../../../node_modules/bulma/sass/base/helpers.sass";
+
+// Elements
+@import "../../../node_modules/bulma/sass/elements/_all.sass";
+//@import "../../../node_modules/bulma/sass/elements/box.sass";
+//@import "../../../node_modules/bulma/sass/elements/button.sass";
+//@import "../../../node_modules/bulma/sass/elements/container.sass";
+//@import "../../../node_modules/bulma/sass/elements/content.sass";
+//@import "../../../node_modules/bulma/sass/elements/icon.sass";
+//@import "../../../node_modules/bulma/sass/elements/image.sass";
+//@import "../../../node_modules/bulma/sass/elements/notification.sass";
+//@import "../../../node_modules/bulma/sass/elements/progress.sass";
+//@import "../../../node_modules/bulma/sass/elements/table.sass";
+//@import "../../../node_modules/bulma/sass/elements/tag.sass";
+//@import "../../../node_modules/bulma/sass/elements/title.sass";
+//@import "../../../node_modules/bulma/sass/elements/other.sass";
+
+// Form
+@import "../../../node_modules/bulma/sass/form/_all.sass";
+//@import "../../../node_modules/bulma/sass/form/shared.sass";
+//@import "../../../node_modules/bulma/sass/form/input-textarea.sass";
+//@import "../../../node_modules/bulma/sass/form/checkbox-radio.sass";
+//@import "../../../node_modules/bulma/sass/form/select.sass";
+//@import "../../../node_modules/bulma/sass/form/file.sass";
+//@import "../../../node_modules/bulma/sass/form/tools.sass";
+
+// Grid
+@import "../../../node_modules/bulma/sass/grid/_all.sass";
+//@import "../../../node_modules/bulma/sass/grid/columns.sass";
+//@import "../../../node_modules/bulma/sass/grid/tiles.sass";
+
+// Components
+@import "../../../node_modules/bulma/sass/components/_all.sass";;
+//@import "../../../node_modules/bulma/sass/components/breadcrumb.sass";
+//@import "../../../node_modules/bulma/sass/components/card.sass";
+//@import "../../../node_modules/bulma/sass/components/dropdown.sass";
+//@import "../../../node_modules/bulma/sass/components/level.sass";
+//@import "../../../node_modules/bulma/sass/components/list.sass";
+//@import "../../../node_modules/bulma/sass/components/media.sass";
+//@import "../../../node_modules/bulma/sass/components/menu.sass";
+//@import "../../../node_modules/bulma/sass/components/message.sass";
+//@import "../../../node_modules/bulma/sass/components/modal.sass";
+//@import "../../../node_modules/bulma/sass/components/navbar.sass";
+//@import "../../../node_modules/bulma/sass/components/pagination.sass";
+//@import "../../../node_modules/bulma/sass/components/panel.sass";
+//@import "../../../node_modules/bulma/sass/components/tabs.sass"
+
+
+// Layout
+@import "../../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../../node_modules/bulma/sass/layout/section.sass";
+@import "../../../node_modules/bulma/sass/layout/footer.sass";
+
+// Extensions
+$badge-border-size: 0px !default;
+$badge-padding: .2rem .35rem !default;
+$badge-border-radius: 1rem !default;
+$badge-size-small: .75rem !default;
+$badge-size-normal: 1rem !default;
+$badge-size-medium: 1.2rem !default;
+$badge-size-large: 1.4rem !default;
+$badge-z-index: 99 !default;
+@import "../../../node_modules/bulma-badge/src/sass/index.sass";
+
+
+
+@import 'icons';
+@import 'layout';
+@import 'site';
+@import 'header';
+@import 'content';
+@import 'page';
+@import 'footer';
+
+
+
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won"t make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+	@import 'print';
+}

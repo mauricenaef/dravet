@@ -9,48 +9,33 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package dravet
+ * @package WP_Bulma
  */
+?>
 
-get_header(); ?>
+<?php get_header(); ?>
 
-	<div id="primary" class="grid-container grid-x grid-padding-y">
-		<main id="main" class="site-main medium-8 cell">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title show-for-sr"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+<div id="primary" class="content-area container">
+	<div class="columns">
+		<main id="main" class="site-main is-8 column" role="main">
+		<?php if ( have_posts() ) : ?>
+				<div class="columns is-multiline">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="column is-one-third">
+							<?php get_template_part( 'template-parts/content', 'post' ); ?>
+						</div>
+					<?php endwhile; ?>
+				</div>
+				<div class="section pagination">
+					<div class="container">
+						<?php the_posts_pagination(); ?>
+					</div>
+				</div>
+				<?php else : ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<?php endif; ?>
 		</main><!-- #main -->
 		<?php get_sidebar(); ?>
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+	</div>
+</div><!-- #primary -->
+<?php get_footer(); ?>

@@ -1,0 +1,18 @@
+.site-content {
+    background-color: $white;
+    .featured-image {
+        margin-top: -0.8rem;
+        margin-bottom: -0.3rem;
+        img {
+            width: 100%;
+        }
+    }
+    .content-area {
+        margin: 0 auto;
+        padding: 4rem 1.5rem 2rem;
+        @include from($desktop) {
+            padding: 4rem 0 2rem;
+        }
+    }
+}
+        

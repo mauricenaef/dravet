@@ -1,0 +1,33 @@
+.site-footer {
+    background-color: $dark-blue;
+    color: $beige-lighter;
+    font-size: 16px;
+    @include from($tablet) {
+        font-size: 14px;
+    }
+    padding-bottom: 1rem;
+    a {
+        color: $white;
+        font-size: 16px;
+        @include from($tablet) {
+            font-size: 14px;
+        }
+        &:hover, &:focus {
+            color: $link;
+        }
+    }
+    @include from($tablet) {
+        padding-bottom: 4rem;
+    }
+    .footer-nav li:first-child a {
+        font-weight: 700;
+    }
+    .credits-container {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+

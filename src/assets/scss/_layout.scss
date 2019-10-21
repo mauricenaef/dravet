@@ -1,0 +1,24 @@
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .site-content {
+        flex: 1;
+    }
+}
+
+@include desktop {
+    /* #primary {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 0;
+        main {
+            grid-area: 1 / 1 / 4 / 9;
+        }
+        aside {
+            grid-area: 1 / 9 / 4 / 13;
+        }
+    } */
+}

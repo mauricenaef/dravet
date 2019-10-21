@@ -1,0 +1,5 @@
+.site {
+    @include from($tablet) {
+        padding-top: 1rem;
+    }
+}

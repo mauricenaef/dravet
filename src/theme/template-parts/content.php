@@ -1,54 +1,54 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying content
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package dravet
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+	<div class="container">
+		<header class="content">
+			<?php if ( is_single() ) : ?>
+				<?php bulmastarter_the_title('is-1', FALSE); ?>
+			<?php elseif ( 'page' === get_post_type() ) : ?>
+				<?php bulmastarter_the_title('is-2', FALSE); ?>
+			<?php else : ?>
+				<?php bulmastarter_the_title('is-2'); ?>
+			<?php endif; ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
+				<div class="subtitle is-6">
+					<?php bulmastarter_posted_on(); ?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</header><!-- .entry-header -->
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php gutenberg_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
+		<div class="content entry-content">
+			<?php the_content( sprintf(
+				/* translators: %s: Name of current post. */
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="show-for-sr"> "%s"</span>', 'dravet' ),
+					__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'dravet' ),
 					array(
 						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+							'class' => array()
+							)
+						)
+					),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				)
+			);
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dravet' ),
 				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+				) );
+				?>
+			</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php gutenberg_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+			<footer class="content entry-footer">
+				<?php bulmastarter_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		</div>
+	</article><!-- #post-## -->

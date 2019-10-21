@@ -1,1 +1,0 @@
-"use strict";var test="Babel is doing the job. Test";$(window).on("load",function(){console.log(test)});var header=$(".site-header");$(window).on("load",function(){$(window).scrollTop(0),setTimeout(function(){$(window).scroll(function(){$(window).scrollTop()>=50?header.addClass("scrolled"):header.removeClass("scrolled")})},2e3)});
