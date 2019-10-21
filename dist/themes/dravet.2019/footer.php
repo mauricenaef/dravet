@@ -87,12 +87,12 @@
 				?>
 				<img src="<?php echo $logo_url; ?>">
 			</div>
-			<div class="column">
-				<p class="is-small">© 2019 Dravet, alle Rechte vorbehalten, Angaben ohne gewähr</p>
+			<div class="column  is-marginless-mobile">
+				<p class="is-small has-text-centered-mobile">© 2019 Dravet, alle Rechte vorbehalten, Angaben ohne gewähr</p>
 			</div>
-			<div class="columns is-1-tablet is-mobile is-centered">
-				<div class="column search-item level-item is-5-mobile">
-					<form>
+			<div class="columns is-10-mobile is-1-tablet is-centered" >
+				<div class="column search-item level-item is-12-mobile is-marginless">
+					<form >
 						<div class="field">
 							<p class="control has-icons-right">
 								<input type="search" placeholder="Suchbegriff eingeben" class="input is-rounded is-small">
@@ -103,7 +103,7 @@
 					
 					</form>
 				</div>
-				<div class="column language-switcher-level-item is-5-mobile">
+				<div class="column language-switcher-level-item is-12-mobile">
 					<div class="control has-icons-left">
 						<div class="select is-small is-fullwidth">
 							<select>
