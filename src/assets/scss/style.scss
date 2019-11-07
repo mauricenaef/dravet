@@ -24,6 +24,7 @@ $light-brown: hsl(0, 0%, 50%);
 $beige-light: hsl(120, 3%, 94%);
 $beige-lighter: hsl(0, 0%, 76%);
 $dark-blue: hsl(219, 100%, 24%);
+$dark-purple: hsl(249, 31%, 39%);
 
 // Update Bulma's global variables
 $family-sans-serif: "Open Sans", sans-serif;
@@ -125,6 +126,7 @@ $badge-z-index: 99 !default;
 
 @import 'icons';
 @import 'typography';
+@import 'custom';
 @import 'layout';
 @import 'site';
 @import 'header';
@@ -132,6 +134,8 @@ $badge-z-index: 99 !default;
 @import 'page';
 @import 'footer';
 
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
 
 /*

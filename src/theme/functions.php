@@ -38,6 +38,11 @@ function bulmastarter_setup() {
 	require get_template_directory() . '/functions/login.php';
 	require get_template_directory() . '/functions/images.php';
 	require get_template_directory() . '/functions/scripts-styles.php';
+
+	require get_template_directory() . '/functions/admin-carbon-fields.php';
+	require get_template_directory() . '/functions/admin-settings.php';
+	require get_template_directory() . '/functions/admin-brands.php';
+	require get_template_directory() . '/functions/admin-faq.php';
 }
 endif;
 add_action( 'after_setup_theme', 'bulmastarter_setup' );

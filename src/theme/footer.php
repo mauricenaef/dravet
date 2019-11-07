@@ -109,7 +109,6 @@
 							<select>
 								<option>Deutsch</option>
 								<option>Francais</option>
-								<option>Italiano</option>
 							</select>
 						</div>
 						<span class="icon is-small is-left">

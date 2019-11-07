@@ -15,6 +15,7 @@ register_nav_menus(
 		'footer-5' => __( 'Fusszeile 5', 'dravet' ),
 		'footer-6' => __( 'Fusszeile 6', 'dravet' ),
 		'footer-7' => __( 'Fusszeile 7', 'dravet' ),
+		'quicklinks' => __( 'Quicklinks', 'dravet' ),
 	) 
 );
 
@@ -27,7 +28,7 @@ if ( ! function_exists( 'bulmastarter_navigation' ) ) {
 			'theme_location'    => 'primary',
 			'depth'             => 0,
 			'container'         => 'div id="navigation"',
-			'menu_class'        => 'navbar-end',
+			'menu_class'        => 'navbar-start',
 			'fallback_cb'       => 'bulmastarter_navwalker::fallback',
 			'walker'            => new bulmastarter_navwalker()
 			)

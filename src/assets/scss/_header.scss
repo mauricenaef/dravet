@@ -1,5 +1,4 @@
 .site-header {
-    flex-grow: 0;
     @include mobile {
         margin: 0;
     }
@@ -8,15 +7,16 @@
             font-size: 12px !important;
         }
     }
-    @include desktop {
+    @include from($desktop) {
+        width: 100%;
     }
     .navbar {
         border-radius: 3px;
         box-shadow:  0 8px 8px rgba(0,0,0,0.1);
-        margin: 0 1.5rem;
-        padding: 0 .5rem;
+        width: 100%;
         @include mobile {
-            margin-top: 2rem;
+            margin: 2rem 1.5rem 0;
+            width: auto;
         }
         @include from($desktop) {
             margin: 0 0 -2px 0;
@@ -24,6 +24,8 @@
         a:not(.custom-logo-link) {
             font-size: 14px;
             border-bottom: 1px solid transparent;
+            font-weight: 500;
+            color: $black-ter;
             &:hover, &:focus {
                 border-bottom: 1px solid $primary;
                 background-color: transparent;
@@ -44,9 +46,6 @@
     .top-nav {
         padding-top: 1rem;
         text-align: right;
-        @include tablet-only {
-            padding-right: 1rem;
-        }
         a {
             color: $grey-dark;
             font-size: 12px;
@@ -58,6 +57,9 @@
                 padding-left: .5em;
             }
         }
+    }
+    .custom-logo-link {
+        max-width: 10rem;
     }
     @include mobile {
         .custom-logo-link {
@@ -71,5 +73,6 @@
         justify-content: center;
         align-items: center;
         padding: .5rem;
+        margin-right: 1em;
     }
 }
