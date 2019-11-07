@@ -8,6 +8,7 @@ use Carbon_Fields\Block;
 add_filter( 'carbon_fields_map_field_api_key', 'crb_get_gmaps_api_key' );
 function crb_get_gmaps_api_key( $current_key ) {
     //return 'AIzaSyA00G0NzDtOzdQRcQc6QRdo5u7lyj7Yz7I';
+    return '';
 }
 
 // Front Page Fields
