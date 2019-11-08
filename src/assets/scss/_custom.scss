@@ -112,3 +112,42 @@
         font-weight: 700;
     }
 }
+
+.is-centered {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.mixed-section {
+    .card-image-peak {
+        //margin-top: 4rem;
+        .card-image img {
+            padding-top: 1rem;
+        }
+    }
+    .glide__bullets {
+        bottom: -2em;
+    }
+    .mixed-nav {
+        padding: 1rem 0 2rem;
+    }
+    .download-list {
+        margin: 1rem 0 1.5rem;
+        li a {
+            font-weight: 600;
+        }
+    }
+    .card-content {
+        p, ul li {
+            font-size: .8rem;
+            margin-bottom: 1em;
+        }
+
+        ul {
+            list-style-type: circle;
+            padding-left: 1rem;
+            margin-left: .5rem;
+        }
+    }
+}
