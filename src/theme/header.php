@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="site is-clipped">
 		<?php bulmastarter_skip_link_screen_reader_text(); ?>
-		<header id="header" class="site-header container">
+		<header id="header" class="site-header">
 			<div class="level is-hidden-mobile">
 				<div class="level-left">
 					<?php bulmastarter_home_link('is-hidden-mobile'); ?>					
@@ -42,18 +42,7 @@
 				</div>
 			</div>
 			<div class="columns">
-				<nav id="site-navigation" class="navbar" role="navigation">
-					<div class="navbar-brand column is-hidden-tablet">
-						<?php bulmastarter_home_link('navbar-item'); ?>
-						<?php bulmastarter_menu_toggle(); ?>
-					</div>
-					<div class="navbar-menu">
-						<?php bulmastarter_navigation(); ?>
-					</div>
-					<div class="navbar-search is-hidden-mobile">
-						<?php svg_icon('search'); ?>
-					</div>
-				</nav>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
 		</header>
 		<div id="content" class="site-content">

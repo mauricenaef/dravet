@@ -8,7 +8,8 @@
  */
 
 const themeName = 'dravet';
-const year = new Date().getFullYear();
+//const year = new Date().getFullYear();
+const year = '2019';
 const projectName = themeName + '.' + year;
 
 module.exports = {

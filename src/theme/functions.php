@@ -14,6 +14,10 @@ require get_template_directory() . '/functions/theme_navwalker.php';
 require get_template_directory() . '/functions/theme_helpers.php';
 require get_template_directory() . '/functions/theme_custom_query.php';
 
+require get_template_directory() . '/functions/theme_custom_widget_article_navigation.php';
+
+
+
 if ( ! function_exists( 'bulmastarter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -43,6 +47,8 @@ function bulmastarter_setup() {
 	require get_template_directory() . '/functions/admin-settings.php';
 	require get_template_directory() . '/functions/admin-brands.php';
 	require get_template_directory() . '/functions/admin-faq.php';
+
+	require get_template_directory() . '/functions/admin-woocommerce.php';
 }
 endif;
 add_action( 'after_setup_theme', 'bulmastarter_setup' );

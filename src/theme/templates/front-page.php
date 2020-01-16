@@ -114,9 +114,8 @@ get_header(); ?>
             <div class="column is-6">
                 <div class="card has-boxshadow">
                     <div class="card-content">
-                        <h3 class="title is-size-6">Service</h3>
-                        <h4 class="is-size-7 subtitle">Wir informieren über das Dravet Syndrom</h4>
-                        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor.</p>
+                        <h3 class="title is-size-5">Service</h3>
+                        <h4 class="is-size-6 subtitle">Wir informieren über das Dravet Syndrom</h4>
                         <ul class="bullet-list">
                             <li>Wir informieren über den aktuellen Stand der Forschung.</li>
                             <li>Wir beraten Familien und ihre Bezugspersonen betreffend Fragen rund um die Alltagsgestaltung, Hilfsmittel, Entlastungsmöglichkeiten usw.</li>     
@@ -140,10 +139,10 @@ get_header(); ?>
                             <ul class="glide__slides">
                                 <li class="glide__slide">
                                     <div class="card-image">
-                                        <?php echo wp_get_attachment_image( 470, array('80', '80'), false, array( 'class' => 'round' ) ); ?>
+                                        <?php echo wp_get_attachment_image( 470, array('100', '100'), false, array( 'class' => 'round' ) ); ?>
                                     </div>
                                     <div class="card-content">
-                                        <h3 class="title is-size-5">Franziska Schneider</h3>
+                                        <h3 class="title is-size-6">Franziska Schneider</h3>
                                         <h4 class="subtitle is-size-7">Kassiererin</h4>
                                         <p><a class="button is-rounded is-primary is-small">Profil Ansehen</a></p>
                                     </div>
@@ -184,22 +183,9 @@ get_header(); ?>
                 <br>
                 <br>
                 <h3 class="title is-size-6">Jahresberichte</h3>
-                <p class="is-size-7"><small>Kostenloser Download der Aktuellen und vergangene Jahresberichte.</small></p>
                 <ul class="download-list is-size-6">
                     <li>
                         <a href="#" class="is-size-7"><?php svg_icon('pdf-file') ?> Jahresbericht 2017 (2.3 Mb)</a>
-                    </li>
-                    <li>
-                        <a href="#" class="is-size-7"><?php svg_icon('pdf-file') ?> Jahresbericht 2016 (1.85 Mb)</a>
-                    </li>
-                    <li>
-                        <a href="#" class="is-size-7"><?php svg_icon('pdf-file') ?> Jahresbericht 2015 (1.85 Mb)</a>
-                    </li>
-                    <li>
-                        <a href="#" class="is-size-7"><?php svg_icon('pdf-file') ?> Jahresbericht 2014 (1 Mb)</a>
-                    </li>
-                    <li>
-                        <a href="#" class="is-size-7"><?php svg_icon('pdf-file') ?> Jahresbericht 2013 (1.8 Mb)</a>
                     </li>
                 </ul>
                 
@@ -212,8 +198,10 @@ get_header(); ?>
 </section>
 <section class="section events-section cards-section">
     <div class="container">
-        <h1 class="title is-size-7">Veranstaltungen</h1>
+        <h1 class="title is-size-6 is-bold">Veranstaltungen</h1>
         <div class="columns is-multiline">
+
+
             <div class="column is-4">
                 <div class="card has-boxshadow">
                     <div class="card-image">
@@ -234,6 +222,8 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
+
+            
             <div class="column is-4">
                 <div class="card has-boxshadow">
                     <div class="card-image">

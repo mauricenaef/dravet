@@ -1,8 +1,10 @@
 <?php
+//namespace App\Blocks;
 
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use Carbon_Fields\Block;
+use function carbon_get_post_meta;
 
 // Google Maps API
 add_filter( 'carbon_fields_map_field_api_key', 'crb_get_gmaps_api_key' );
@@ -15,6 +17,10 @@ function crb_get_gmaps_api_key( $current_key ) {
 add_action( 'carbon_fields_register_fields', 'custom_carbon_fields_front_page' );
 function custom_carbon_fields_front_page() {
     
+    /*
+    * Event Post Meta
+    */
+
     Container::make( 'post_meta', 'Event Infos' )
     //->set_context( 'side' )
     ->where( 'post_type', '=', 'post' )
@@ -29,17 +35,16 @@ function custom_carbon_fields_front_page() {
         
     ));
 
+
     
+    /*
+    * Card Block
+    */
+
     $card_labels = array(
         'plural_name' => 'Cards',
         'singular_name' => 'Card',
     );
-
-    $faq_labels = array(
-        'plural_name' => 'FAQs',
-        'singular_name' => 'FAQ',
-    );
-
     Block::make( __( 'Card Element' ) )
     ->add_fields( array(
         Field::make( 'complex', 'crb_slider', __( 'Card Element' ) )
@@ -60,26 +65,77 @@ function custom_carbon_fields_front_page() {
     ->set_category( 'dravet-category', __( 'Dravet Blöcke' ) )
     ->set_preview_mode( false )
     //->set_description( __( 'A simple block consisting of a heading, an image and a text content.' ) )
-    ->set_render_callback( function ( $block ) {
+    ->set_render_callback( function ( $fields ) {
+
+        ?>
+        <div class="card_wrap">
+        <?php foreach ($fields['crb_slider'] as $block): ?>
+
+            <div class="card has-boxshadow">
+                <div class="card-image">
+                    <figure class="image ">
+                        <?php echo wp_get_attachment_image( $block['photo'], 'seven-sixty', false, array( 'class' => 'hero' ) ); ?>
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media-content">
+                        <p class="title is-6"><?php  echo esc_html( $block['title'] ); ?></p>
+                        <p class="subtitle is-6"><time datetime="2016-1-1">Donnerstag, 28.02.2019</time></p>
+                    </div>
+                <div class="content">
+                    <?php echo apply_filters( 'the_content', $block['content'] ); ?>
+                </div>
+                </div>
+                <div class="card-footer-item level-right">
+                    <?php svg_icon('navigation-menu-vertical', 'level-right'); ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div>
+        <?php
+
+    } );
+
+
+
+    /*
+    * FAQ Block
+    */
+
+    Block::make( __( 'My Shiny Gutenberg Block' ) )
+    ->add_fields( array(
+        Field::make( 'text', 'heading', __( 'Block Heading' ) ),
+        Field::make( 'image', 'image', __( 'Block Image' ) ),
+        Field::make( 'rich_text', 'content', __( 'Block Content' ) ),
+    ) )
+    ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
         ?>
 
         <div class="block">
             <div class="block__heading">
-                <h1><?php echo esc_html( $block['title'] ); ?></h1>
+                <h1><?php echo esc_html( $fields['heading'] ); ?></h1>
             </div><!-- /.block__heading -->
 
             <div class="block__image">
-                <?php echo wp_get_attachment_image( $block['photo'], 'full' ); ?>
+                <?php echo wp_get_attachment_image( $fields['image'], 'full' ); ?>
             </div><!-- /.block__image -->
 
             <div class="block__content">
-                <?php echo apply_filters( 'the_content', $block['content'] ); ?>
+                <?php echo apply_filters( 'the_content', $fields['content'] ); ?>
             </div><!-- /.block__content -->
         </div><!-- /.block -->
 
         <?php
     } );
 
+    /*
+    * FAQ Block
+    */
+
+    $faq_labels = array(
+        'plural_name' => 'FAQs',
+        'singular_name' => 'FAQ',
+    );
 
     Block::make( __( 'FAQ Element' ) )
     ->add_fields( array(
@@ -100,19 +156,22 @@ function custom_carbon_fields_front_page() {
     ->set_preview_mode( false )
     //->set_description( __( 'A simple block consisting of a heading, an image and a text content.' ) )
     ->set_render_callback( function ( $block ) {
-        ?>
 
+        foreach ($block['crb_slider'] as $item): 
+        ?>
         <div class="block">
             <div class="block__heading">
-                <h1><?php echo esc_html( $block['title'] ); ?></h1>
+                <h1><?php echo esc_html( $item['title'] ); ?></h1>
             </div><!-- /.block__heading -->
 
             <div class="block__content">
-                <?php echo apply_filters( 'the_content', $block['content'] ); ?>
+                <?php echo apply_filters( 'the_content', $item['content'] ); ?>
             </div><!-- /.block__content -->
         </div><!-- /.block -->
 
         <?php
+        endforeach;
+
     } );
 }
 

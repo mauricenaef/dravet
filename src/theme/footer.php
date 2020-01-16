@@ -77,7 +77,7 @@
 					) );
 				?>
 				<p>Swiss Dravet-Syndrome Association<br />8000 Zürich<br /><a href="mailto:info@dravet.ch">info@dravet.ch</a></p>
-				<p>Spendenkonto:<br />85-599491-3<br />IBAN CH36 0900 0000 8559 9491 3</p>
+				<br><p>Spendenkonto:<br />85-599491-3<br />IBAN CH36 0900 0000 8559 9491 3</p>
 			</div>
 		</div>
 		<div class="columns credits-container">
@@ -90,7 +90,7 @@
 			<div class="column  is-marginless-mobile">
 				<p class="is-small has-text-centered-mobile">© 2019 Dravet, alle Rechte vorbehalten, Angaben ohne gewähr</p>
 			</div>
-			<div class="columns is-10-mobile is-1-tablet is-centered" >
+			<div class="columns is-10-mobile is-2-tablet is-centered" >
 				<div class="column search-item level-item is-12-mobile is-marginless">
 					<form >
 						<div class="field">
@@ -102,19 +102,6 @@
 					
 					
 					</form>
-				</div>
-				<div class="column language-switcher-level-item is-12-mobile">
-					<div class="control has-icons-left">
-						<div class="select is-small is-fullwidth">
-							<select>
-								<option>Deutsch</option>
-								<option>Francais</option>
-							</select>
-						</div>
-						<span class="icon is-small is-left">
-							<?php svg_icon('globe', ''); ?>
-						</span>
-					</div>
 				</div>
 			</div>
 		</div>
