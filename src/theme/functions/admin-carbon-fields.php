@@ -4,13 +4,13 @@
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 use Carbon_Fields\Block;
-use function carbon_get_post_meta;
+//use function carbon_get_post_meta;
 
 // Google Maps API
 add_filter( 'carbon_fields_map_field_api_key', 'crb_get_gmaps_api_key' );
 function crb_get_gmaps_api_key( $current_key ) {
-    //return 'AIzaSyA00G0NzDtOzdQRcQc6QRdo5u7lyj7Yz7I';
-    return '';
+    return 'AIzaSyA00G0NzDtOzdQRcQc6QRdo5u7lyj7Yz7I';
+    //return '';
 }
 
 // Front Page Fields
@@ -52,6 +52,9 @@ function custom_carbon_fields_front_page() {
         ->add_fields( array(
             Field::make( 'text', 'title', __( 'Element Titel' ) ),
             Field::make( 'text', 'subtitle', __( 'Element Subtitel Titel (optional)' ) ),
+            /* Field::make( 'date', 'date', __( 'Datum anstelle von Subtitel anzeigen?' ) )
+            ->set_attribute( 'placeholder', __( 'Datum' ) )
+            ->set_storage_format( 'd.m.Y' ) , */
             Field::make( 'image', 'photo', __( 'Element Bild / Logo' ) ),
             Field::make( 'rich_text', 'content', __( 'Inhalt' ) ),
         ) )
@@ -74,13 +77,28 @@ function custom_carbon_fields_front_page() {
             <div class="card has-boxshadow">
                 <div class="card-image">
                     <figure class="image ">
-                        <?php echo wp_get_attachment_image( $block['photo'], 'seven-sixty', false, array( 'class' => 'hero' ) ); ?>
+                        <?php echo wp_get_attachment_image( $block['photo'], 'card-header', false, array( 'class' => 'hero' ) ); ?>
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="media-content">
                         <p class="title is-6"><?php  echo esc_html( $block['title'] ); ?></p>
-                        <p class="subtitle is-6"><time datetime="2016-1-1">Donnerstag, 28.02.2019</time></p>
+                        <?php
+                            
+                            //print_r($block);
+
+                            if ( $block['subtitle'] ) {
+                                ?>
+                                <p class="subtitle is-6"><?php echo esc_html( $block['subtitle'] ); ?></p>
+                                <?php
+                            } 
+                            /* elseif ( $block['date'] == true ) {
+                                ?>
+                                <p class="subtitle is-6"><time><?php echo esc_html( $block['date'] ); ?><time></p>
+                                <?php
+                            }  */
+                        ?>
+                        
                     </div>
                 <div class="content">
                     <?php echo apply_filters( 'the_content', $block['content'] ); ?>

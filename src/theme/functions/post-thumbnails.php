@@ -32,7 +32,6 @@ if ( function_exists( 'add_theme_support' ) ) {
     //800 square pixels cropped
   
     // width-only images
-  
     add_image_size( 'three-fourty', 340);
     add_image_size( 'four-twenty', 420);
     add_image_size( 'six-hundred', 600);
@@ -44,7 +43,14 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'fourteen-hundred', 1400);
     add_image_size( 'hero', 1400, 500, true);
     add_image_size( 'eighteen-eighty', 1880);
+
+
+    // Cards Header image
+    add_image_size( 'card-header', 300, 180, true );
+
   }
+
+
 
 function dravet_responsive_image($image_id,$image_size,$max_width){
 	// check the image ID is not blank

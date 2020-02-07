@@ -90,13 +90,13 @@
 			<div class="column  is-marginless-mobile">
 				<p class="is-small has-text-centered-mobile">© 2019 Dravet, alle Rechte vorbehalten, Angaben ohne gewähr</p>
 			</div>
-			<div class="columns is-10-mobile is-2-tablet is-centered" >
+			<!-- <div class="columns is-10-mobile is-2-tablet is-centered" >
 				<div class="column search-item level-item is-12-mobile is-marginless">
 					<form >
 						<div class="field">
 							<p class="control has-icons-right">
 								<input type="search" placeholder="Suchbegriff eingeben" class="input is-rounded is-small">
-								<?php svg_icon('search', 'icon is-small is-right'); ?>
+								<?php //svg_icon('search', 'icon is-small is-right'); ?>
 							</p>
 						</div>
 					
@@ -104,7 +104,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>	
 </footer>
 </div><!-- #page -->
