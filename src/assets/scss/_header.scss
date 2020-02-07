@@ -1,6 +1,6 @@
 .site-header {
-    padding: 0 2rem;
     @include mobile {
+        padding: 0 2rem;
         margin: 0;
     }
     @include tablet-only {
@@ -13,6 +13,7 @@
     }
     > .level {
         margin-bottom: 1.8rem;
+        padding: 0 2rem;
     }
     .navbar {
         border-radius: 3px;
