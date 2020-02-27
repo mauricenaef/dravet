@@ -8,10 +8,10 @@ function custom_post_type_sponsor() {
 	$labels = array(
 		'name'                => _x( 'Sponsor', 'Post Type General Name', 'dravet' ),
 		'singular_name'       => _x( 'Sponsor', 'Post Type Singular Name', 'dravet' ),
-		'menu_name'           => __( 'Sponsoren', 'dravet' ),
+		'menu_name'           => __( 'Partner', 'dravet' ),
 		'name_admin_bar'      => __( 'Sponsor', 'dravet' ),
 		'parent_item_colon'   => __( 'Sponsor:', 'dravet' ),
-		'all_items'           => __( 'Alle Sponsoren', 'dravet' ),
+		'all_items'           => __( 'Alle Partner', 'dravet' ),
 		'add_new_item'        => __( 'Neuer Sponsor', 'dravet' ),
 		'add_new'             => __( 'Neuer Sponsor hinzufügen', 'dravet' ),
 		'new_item'            => __( 'Neuer Sponsor', 'dravet' ),
@@ -23,8 +23,8 @@ function custom_post_type_sponsor() {
 		'not_found_in_trash'  => __( 'Im Papierkorb wurde nichts gefunden', 'dravet' ),
 	);
 	$args = array(
-		'label'               => __( 'Sponsor', 'dravet' ),
-		'description'         => __( 'Sponsor', 'dravet' ),
+		'label'               => __( 'Partner', 'dravet' ),
+		'description'         => __( 'Partner', 'dravet' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', 'revisions' ),
 		'hierarchical'        => true,
@@ -128,14 +128,14 @@ function dravet_sponsor() {
 			
 			if ($custom_posts) {
 				//echo '<small class="sponsor-claim">dravet wird unterstützt von:</small>';
-				echo '<div class="container ">';
+				echo '<div class="container is-fluid">';
 				echo '<div class="columns">';
 				
 				foreach($custom_posts as $post) : setup_postdata($post);
 
 				$svg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
-				echo '<div class="sponsor-item column is-2">';
+				echo '<div class="sponsor-item column is-4-tablet is-6-mobile">';
 				echo '<a href="' . get_post_meta( $post->ID, '_sponsor_url', true ) . '" class="sponsor-url ' . $post->post_name . '" >';
 				echo '<img src="' . $svg[0] . '" />';
 				echo '</a>';
@@ -147,7 +147,7 @@ function dravet_sponsor() {
 				echo '</div>';
 
 			} else {
-				echo '<h3>Keine Sponsoren</h3>';
+				echo '<h3>Keine Partner</h3>';
 			}
 			
 			?>

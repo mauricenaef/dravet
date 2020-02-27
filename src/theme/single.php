@@ -17,7 +17,6 @@ get_header(); ?>
 				<div class="container is-narrow">
 					<?php the_post_navigation();?>
 				</div>
-				<?php //bulmastarter_get_comments(); ?>
 				<?php endwhile; ?>
 			</main><!-- #main -->
 			<?php get_sidebar(); ?>

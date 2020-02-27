@@ -76,6 +76,7 @@
 						'theme_location' => 'footer-7',
 					) );
 				?>
+				<br />
 				<p>Swiss Dravet-Syndrome Association<br />8000 Zürich<br /><a href="mailto:info@dravet.ch">info@dravet.ch</a></p>
 				<br><p>Spendenkonto:<br />85-599491-3<br />IBAN CH36 0900 0000 8559 9491 3</p>
 			</div>

@@ -1,8 +1,5 @@
-<?php
+<?php 
 
-/**
- * Article Navigation Widget Class
- */
 // Register and load the widget
 function wpb_load_widget() {
     register_widget( 'dravet_article_nav' );
@@ -48,7 +45,7 @@ class dravet_article_nav extends WP_Widget {
             $title = $instance[ 'title' ];
         }
         else {
-            $title = __( 'Artikel Navigation', 'dravet' );
+            $title = __( 'Titel', 'dravet' );
         }
         // Widget admin form
         ?>

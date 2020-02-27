@@ -60,6 +60,10 @@ get_header(); ?>
 				) );
 			?>
         </div>
+        <div data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--right" data-glide-dir="<"><?php svg_icon('chev-right'); ?></button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir=">"><?php svg_icon('chev-left'); ?></button>
+        </div>
     </div>
 </nav>
 <section class="section news-section">
