@@ -14,9 +14,9 @@
 			<?php if ( is_single() ) : ?>
 				<?php bulmastarter_the_title('is-1', FALSE); ?>
 			<?php elseif ( 'page' === get_post_type() ) : ?>
-				<?php bulmastarter_the_title('is-2', FALSE); ?>
+				<?php bulmastarter_the_title('is-1', FALSE); ?>
 			<?php else : ?>
-				<?php bulmastarter_the_title('is-2'); ?>
+				<?php bulmastarter_the_title('is-1'); ?>
 			<?php endif; ?>
 			<?php if ( 'post' === get_post_type() ) : ?>
 				<div class="subtitle is-6">

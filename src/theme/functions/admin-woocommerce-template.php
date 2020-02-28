@@ -96,7 +96,7 @@ add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_checkout' );
 #------------------------------------------------------------------------------------
 
 // Custom Checkout Fields
-//add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
 
 // Our hooked in function - $fields is passed via the filter!
@@ -111,8 +111,8 @@ function custom_override_checkout_fields( $fields ) {
 	$fields['billing']['billing_postcode']['placeholder'] = 'PLZ';
 	$fields['billing']['billing_city']['placeholder'] = 'Ort';
 
-	$fields['billing']['billing_first_name']['class'] = array('control');
-	$fields['billing']['billing_last_name']['class'] = array('control');
+	$fields['billing']['billing_first_name']['class'] = array('control is-half');
+	$fields['billing']['billing_last_name']['class'] = array('control is-half');
 	$fields['billing']['billing_postcode']['class'] = array('control');
 	$fields['billing']['billing_city']['class'] = array('control');
 	$fields['billing']['billing_email']['class'] = array('control');
@@ -132,7 +132,7 @@ function change_woocommerce_field_markup( $field, $key, $args, $value ) {
 
     //  Wrap the field (and its wrapper) in a new custom div, adding .form-row so the reshuffling works as expected, and adding the field priority
 
-    $field = '<div class="control" data-priority="' . $args['priority'] . '">' . $field . '</div>';
+    $field = '<div class="control field" data-priority="' . $args['priority'] . '">' . $field . '</div>';
 
     return $field;
 }

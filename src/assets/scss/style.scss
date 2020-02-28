@@ -37,9 +37,17 @@ $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-light;
-$control-border-width: 2px;
-$input-border-color: transparent;
+$control-border-width: 1px;
+$input-border-color: $dark-brown;
 $input-shadow: none;
+
+$size-1: 2.5rem !default;
+$size-2: 1.6rem !default;
+$size-3: 1.4rem !default;
+$size-4: 1.3rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
 
 // Import only what you need from Bulma
 
@@ -133,6 +141,7 @@ $badge-z-index: 99 !default;
 @import 'sidebar';
 @import 'content';
 @import 'page';
+@import 'form';
 @import 'faq';
 @import 'footer';
 @import 'woocommerce';
