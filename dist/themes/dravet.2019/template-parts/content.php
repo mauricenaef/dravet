@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container">
+	<div class="container-d">
 		<header class="content">
 			<?php if ( is_single() ) : ?>
 				<?php bulmastarter_the_title('is-1', FALSE); ?>
