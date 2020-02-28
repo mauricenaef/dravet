@@ -135,7 +135,7 @@ function dravet_sponsor() {
 
 				$svg = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
 
-				echo '<div class="sponsor-item column is-4-tablet is-6-mobile">';
+				echo '<div class="sponsor-item column is-2-desktop is-4-tablet is-6-mobile">';
 				echo '<a href="' . get_post_meta( $post->ID, '_sponsor_url', true ) . '" class="sponsor-url ' . $post->post_name . '" >';
 				echo '<img src="' . $svg[0] . '" />';
 				echo '</a>';

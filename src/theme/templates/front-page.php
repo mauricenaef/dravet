@@ -130,7 +130,7 @@ get_header(); ?>
                         <br />
                         <a href="#" class="button is-link is-size-7 is-rounded" >Bestellen Sie unser Informationsfaltblatt <?php svg_icon('chev-right', 'is-small') ?></a>
                     </div>
-                    
+                    <?php dravet_faq();  ?>
                 </div>
             </div>
             <div class="column is-4 is-offset-2">

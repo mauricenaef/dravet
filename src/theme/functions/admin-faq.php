@@ -85,7 +85,7 @@ function custom_taxonomy_faq_kategorie() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
@@ -104,8 +104,10 @@ add_action('wp_ajax_dravet_faq_ajax', 'dravet_faq_ajax');
 add_action('wp_ajax_nopriv_dravet_faq_ajax', 'dravet_faq_ajax');
 
 function dravet_faq_ajax() {
+	
 	$term_id = $_POST[ 'term' ];
-    $args = array (
+	
+	$args = array (
 		'term' => $term_id,
 		'post_type' => 'faq',
         'posts_per_page' => -1,
@@ -125,7 +127,7 @@ function dravet_faq_ajax() {
 	ob_start (); 
 	if($custom_posts) {
 	foreach($custom_posts as $post) : setup_postdata($post);
-	the_title('<h6 class="accordion-toggle">','</h6>');
+	the_title('<h6 class="accordion-toggle has-text-secondary">','</h6>');
 	echo "<div class='accordion-content'>";
 	the_content();
 	echo "</div>";
@@ -160,16 +162,13 @@ function dravet_faq( $datahash = null ) {
     <section class="testimonial-section bg-lighter section-padding">
         <div class="grid-container">
             <div class="grid-x align-justify align-middle small-align-center-middle">
-                <div class="cell small-6 medium-3 medium-offset-1">
-                    <img src="<?php bloginfo( 'template_url' ) ?>/images/icon/icon-faq.svg" class="section-icon faq-section-icon" alt="Testimonial">
-                </div>
+         
                 <div class="cell small-10 medium-5 large-4 medium-offset-pull-1">
                     <div class="card testimonial-card faq-card shadow">
-                        <div class="card-header text-center">
-                            <h2 class="card-header-title"><?php echo carbon_get_theme_option('home_faq_title'); ?></h2>
-                            <?php echo apply_filters( 'the_content', carbon_get_theme_option('home_faq_content') ); ?>
-                        </div>
-                        <div class="card-content shadow">
+                        
+                        <div class="card-content shadow is-clearfix">
+							<h4 class="faq-title is-inline is-pulled-left"><strong><?php _e('Häufige Fragen:', 'dravet'); ?></strong></h4>
+							<div class="select is-primary is-pulled-right">
 							<?php 
 							// Create and display the dropdown menu.
 							wp_dropdown_categories(
@@ -181,10 +180,11 @@ function dravet_faq( $datahash = null ) {
 									//'selected'        => km_get_selected_taxonomy_dropdown_term(), // Set which option in the dropdown menu is the currently selected one.
 								) );
 							?>
+							</div>
 							<div id="card-container"  class="card-container">
 								<div id="loading-faq" class="loading-container">
-									<img src="<?php bloginfo( 'template_url' ) ?>/images/loading-dark.svg">
-									<p class="element-padding text-center"><small>FAQ werden geladen ...</small></p>
+									<img src="<?php bloginfo( 'template_url' ) ?>/images/loading.svg" class="loading">
+									<p class="element-padding text-center"><small><?php _e('FAQ werden geladen ...', 'dravet'); ?></small></p>
 								</div>
 								<div id="card-content"></div>
 							</div>

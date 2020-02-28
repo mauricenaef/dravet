@@ -7,7 +7,7 @@
         color: $black-ter;
     }
     ul {
-        list-style-type: disc;
+        list-style-type: none;
         line-height: 1.8;
         li {
             color: $grey-darker;
@@ -30,4 +30,8 @@ hr {
 
 .round {
     border-radius: 20000px;
+}
+
+.has-text-secondary {
+    color: #8ec167 !important;
 }

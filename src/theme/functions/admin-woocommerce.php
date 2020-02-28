@@ -69,3 +69,16 @@ function lv2_add_bulma_input_classes( $args, $key, $value = null ) {
     return $args;
   }
   add_filter('woocommerce_form_field_args','lv2_add_bulma_input_classes',10,3);
+
+  
+add_filter( 'woocommerce_breadcrumb_defaults', 'dravet_woocommerce_breadcrumbs' );
+function dravet_woocommerce_breadcrumbs() {
+    return array(
+            'delimiter'   => '',
+            'wrap_before' => '<nav class="breadcrumb" itemprop="breadcrumb" aria-label="breadcrumbs"><ul>',
+            'wrap_after'  => '</ul></nav>',
+            'before'      => '<li>',
+            'after'       => '</li>',
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        );
+}

@@ -1,0 +1,23 @@
+.woocommerce {
+    .breadcrumb {
+        li + li::before {
+            color: $grey-darker;
+        }
+        li:last-of-type::before {
+            padding-right: .8em;
+        }
+    }
+}
+
+.single-product {
+    .cart {
+        margin-top: 1rem;
+        input[type=number] {
+            line-height: 2.8;
+        }
+    }
+}
+
+.woocommerce .button {
+    height: auto !important;
+}

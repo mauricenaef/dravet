@@ -49,6 +49,8 @@ function bulmastarter_setup() {
 	require get_template_directory() . '/functions/admin-faq.php';
 
 	require get_template_directory() . '/functions/admin-woocommerce.php';
+	require get_template_directory() . '/functions/admin-woocommerce-template.php';
+	add_theme_support( 'woocommerce' );
 }
 endif;
 add_action( 'after_setup_theme', 'bulmastarter_setup' );

@@ -1,0 +1,71 @@
+.card-container {
+    position: relative;
+    min-height: 10rem;
+    margin-top: 3rem;
+    clear: both;
+}
+.card-content {
+    .faq-title {
+        line-height: 2.2;;
+    }
+    visibility: visible;
+    opacity: 1;
+    clear: both;
+    &.fadeout {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 600ms, opacity 600ms fade-in-out;
+    }
+    .loading-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        background: white;
+        z-index: 1000;
+        img {
+            opacity: .5;
+        }
+        visibility: visible;
+        opacity: 1;
+        &.loaded {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 600ms, opacity 600ms fade-in-out;
+        }
+    }
+}
+
+.accordion-toggle { 
+    cursor: pointer; 
+    padding: .3em 2.5rem .3em .5rem;
+    font-size: rem-calc(14);
+    position: relative;
+    opacity: .8;
+    &:hover, &:focus {
+        opacity: .5;
+    }
+    &:after {
+        content: "+";
+        position: absolute;
+        right: 1rem;
+        top: .3em;
+        font-size: rem-calc(18);
+    }
+    &.open {
+        opacity: 1;
+        &:after {
+            content: "-"
+        }
+    }
+}
+.accordion-content {
+    display: none;
+    padding: 0 .5rem;
+}

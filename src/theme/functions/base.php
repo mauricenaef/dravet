@@ -46,7 +46,8 @@ add_theme_support( 'html5', array(
 function wp_localize_icon_vars(){
     $svg_url = get_bloginfo('template_url') . '/images/symbol-defs.svg';
     $svglocalstorage = array(
-    	'url'			=> get_bloginfo('template_url'),
+		'url'			=> get_bloginfo('template_url'),
+		'ajaxurl' 		=> admin_url( 'admin-ajax.php' ),
     	'svg_url' 		=> $svg_url,
     	'timestamp'		=> filemtime( TEMPLATEPATH . '/images/symbol-defs.svg' )
     );

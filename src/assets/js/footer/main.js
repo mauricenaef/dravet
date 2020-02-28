@@ -37,7 +37,7 @@
 	const loading = article_navigation.find('.loading');
 
 	// Add ID's to H2 tags and generate array
-	parent_container.find('h2').each(function(index) {
+	parent_container.find('h2 , h3').each(function(index) {
 		const that = $(this);
 		const id_headings = index ; 
 		that.attr('id', 'Kapitel_' + id_headings);
@@ -75,7 +75,7 @@ $( document ).ready(function() {
   
 	  const generalSidebarHeight = $sticky.innerHeight();
 	  const stickyTop = $sticky.offset().top;
-	  const stickOffset = 0;
+	  const stickOffset = 10;
 	  const stickyStopperPosition = $stickyrStopper.offset().top;
 	  const stopPoint = stickyStopperPosition - generalSidebarHeight - stickOffset;
 	  const diff = stopPoint + stickOffset;
@@ -93,6 +93,6 @@ $( document ).ready(function() {
 	  });
   
 	}
-  });
-});
+  });  
+})( jQuery );
 

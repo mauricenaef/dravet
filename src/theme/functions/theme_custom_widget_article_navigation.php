@@ -36,7 +36,7 @@ class dravet_article_nav extends WP_Widget {
         echo $args['before_title'] . $title . $args['after_title'];
         ?>
         <div id="article_navigation" class="is-hidden-mobile">
-        <span class="loading">... Loading</span>
+        <img src="<?php bloginfo( 'template_url' ) ?>/images/loading.svg" class="loading">
         </div>
         <?php
         echo $args['after_widget'];

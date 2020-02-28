@@ -55,6 +55,7 @@ function custom_carbon_fields_front_page() {
         ->add_fields( array(
             Field::make( 'text', 'title', __( 'Element Titel' ) ),
             Field::make( 'text', 'subtitle', __( 'Element Subtitel Titel (optional)' ) ),
+            Field::make( 'checkbox', 'layout', __( 'Layout Quer' ) ),
             /* Field::make( 'date', 'date', __( 'Datum anstelle von Subtitel anzeigen?' ) )
             ->set_attribute( 'placeholder', __( 'Datum' ) )
             ->set_storage_format( 'd.m.Y' ) , */
@@ -74,9 +75,50 @@ function custom_carbon_fields_front_page() {
     ->set_render_callback( function ( $fields ) {
 
         ?>
+        <?php
+        if(isset($fields['crb_slider'][0]['layout'])) {
+            ?>
+            <div class="card_quer">
+            <?php foreach ($fields['crb_slider'] as $block): ?>
+                <div class="media">
+                    <div class="media-left">
+                        <figure class="image is-96x96">
+                            <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => 'is-rounded' ) ); ?>
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="field">
+                            <p class="title is-5"><?php  echo esc_html( $block['title'] ); ?></p>
+                            <?php
+                                
+                                if ( $block['subtitle'] ) {
+                                    ?>
+                                    <p class="subtitle is-6"><?php echo esc_html( $block['subtitle'] ); ?></p>
+                                    <?php
+                                } 
+                                /* elseif ( $block['date'] == true ) {
+                                    ?>
+                                    <p class="subtitle is-6"><time><?php echo esc_html( $block['date'] ); ?><time></p>
+                                    <?php
+                                }  */
+                            ?>
+                            
+                        </div>
+                    <div class="content">
+                        <?php echo apply_filters( 'the_content', $block['content'] ); ?>
+                    </div>
+                    </div>
+                    <div class="card-footer-item level-right">
+                        <?php svg_icon('navigation-menu-vertical', 'level-right'); ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            </div>
+            <?php
+        } else {
+        ?>
         <div class="card_wrap">
         <?php foreach ($fields['crb_slider'] as $block): ?>
-
             <div class="card has-boxshadow">
                 <div class="card-image">
                     <figure class="image ">
@@ -88,8 +130,6 @@ function custom_carbon_fields_front_page() {
                         <p class="title is-6"><?php  echo esc_html( $block['title'] ); ?></p>
                         <?php
                             
-                            //print_r($block);
-
                             if ( $block['subtitle'] ) {
                                 ?>
                                 <p class="subtitle is-6"><?php echo esc_html( $block['subtitle'] ); ?></p>
@@ -114,6 +154,7 @@ function custom_carbon_fields_front_page() {
         <?php endforeach; ?>
         </div>
         <?php
+        }
 
     } );
 
@@ -123,7 +164,7 @@ function custom_carbon_fields_front_page() {
     * FAQ Block
     */
 
-    Block::make( __( 'My Shiny Gutenberg Block' ) )
+/*     Block::make( __( 'My Shiny Gutenberg Block' ) )
     ->add_fields( array(
         Field::make( 'text', 'heading', __( 'Block Heading' ) ),
         Field::make( 'image', 'image', __( 'Block Image' ) ),
@@ -147,7 +188,7 @@ function custom_carbon_fields_front_page() {
         </div><!-- /.block -->
 
         <?php
-    } );
+    } ); */
 
     /*
     * FAQ Block
@@ -177,22 +218,20 @@ function custom_carbon_fields_front_page() {
     ->set_preview_mode( false )
     //->set_description( __( 'A simple block consisting of a heading, an image and a text content.' ) )
     ->set_render_callback( function ( $block ) {
-
-        foreach ($block['crb_slider'] as $item): 
         ?>
-        <div class="block">
-            <div class="block__heading">
-                <h1><?php echo esc_html( $item['title'] ); ?></h1>
-            </div><!-- /.block__heading -->
-
-            <div class="block__content">
+        <div id="card-content" class="block">
+        <?php
+        foreach ($block['crb_slider'] as $item): 
+        ?>        
+            <h1 class="is-size-5 has-text-secondary accordion-toggle"><?php echo esc_html( $item['title'] ); ?></h1>
+            <div class="block__content accordion-content">
                 <?php echo apply_filters( 'the_content', $item['content'] ); ?>
             </div><!-- /.block__content -->
-        </div><!-- /.block -->
-
         <?php
         endforeach;
-
+        ?>
+        </div><!-- /.block -->
+        <?php
     } );
 }
 
@@ -221,12 +260,12 @@ if ( is_plugin_active( 'carbon-admin-columns-manager/carbon-admin-columns-manage
 // Sponsor Fields
 add_action( 'carbon_fields_register_fields', 'custom_carbon_fields_sponsor' );
 function custom_carbon_fields_sponsor() {
-    Container::make( 'post_meta', 'Sponsor Daten' )
+    Container::make( 'post_meta', 'Partner Daten' )
     ->where( 'post_type', '=', 'sponsor' )
     ->add_fields( array(
     
-        Field::make( 'text', '_sponsor_url', 'Sponsor URL' )
-        ->set_help_text( 'Gebe optional die Sponsor Webseite an' ),
+        Field::make( 'text', '_sponsor_url', 'Partner URL' )
+        ->set_help_text( 'Gebe optional die Partner Webseite an' ),
     ));
 }
 
