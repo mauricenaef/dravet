@@ -7,6 +7,7 @@
 // This theme uses wp_nav_menu() in one location.	
 register_nav_menus( 
 	array(
+		'header' => __( 'Headernavigation', 'dravet' ),
 		'primary' => __( 'Hauptnavigation', 'dravet' ),
 		'footer-1' => __( 'Fusszeile 1', 'dravet' ),
 		'footer-2' => __( 'Fusszeile 2', 'dravet' ),

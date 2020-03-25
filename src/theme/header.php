@@ -34,10 +34,18 @@
 				</div>
 				<div class="level-right">
 					<div class="top-nav level is-mobile">
-						<a href="#" class="level-item divider-right"><strong>DE</strong></a>
-						<a href="#" class="level-item">FR</a>
-						<a href="#" class="level-item divider-right">Mitgliederbereich</a>
-						<a href="#" class="level-item">Kontakt</a>
+						<?php
+						$languages = pll_the_languages( array( 'raw' => 1 ) );
+						$item = '';
+						if($languages) {
+							foreach($languages as $language) {
+								$class = in_array( 'current-lang', $language['classes']) ? ' current_lang' : '';
+								echo '<a href="' . $language['url'] . '" class="level-item languages'. $class .'">' . $language['slug'] . '</a>';
+							}
+						}												
+						?>
+						<span>&nbsp;</span>
+						<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_class' => 'header-menu',) ); ?>
 					</div>
 				</div>
 			</div>

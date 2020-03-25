@@ -1,0 +1,27 @@
+.ginput_container {
+    span {
+        margin-bottom: 1rem;
+    }
+    input {
+        border-radius: 100px;
+    }
+    textarea {
+        border-radius: 5px;
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+    input,
+    textarea {
+        margin: 0;
+        border: 1px solid $dark-brown;
+        padding: .25em .75em !important;
+        margin: 0 -0.35em !important;
+        &:focus {
+            outline: none !important;
+            border-color: $green !important;
+        }
+    }
+}
