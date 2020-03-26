@@ -1,0 +1,11 @@
+.archives {
+    margin-top: 2rem;
+    .card {
+        a {
+            display: block;
+            &.title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -69,7 +69,7 @@
 
 $( document ).ready(function() {
   
-	const $sticky = $('#secondary > section');
+	const $sticky = $('.sticky > section');
 	const $stickyrStopper = $('#colophon');
 	if (!!$sticky.offset()) { // make sure ".sticky" element exists
   

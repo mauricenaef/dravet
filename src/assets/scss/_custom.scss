@@ -80,15 +80,23 @@
         //margin-right: 2rem;
         padding: 1rem;
     }
-
-    .card {
-        .content {
-            margin-top: 1rem;
-            margin-bottom: -2rem;
+}
+body:not(.home) .card {
+    .title {
+        margin-bottom: .75em;
+    }
+    time {
+        color: $green;
+        font-size: .8rem;
+    }
+    .content {
+        margin-top: .5rem;
+        margin-bottom: -2rem;
+        p {
+            font-size: .8rem;
         }
     }
 }
-
 .button {
     .icon {
         margin-left: 0.1em !important;
@@ -159,6 +167,10 @@
             margin-left: .5rem;
         }
     }
+}
+
+.is-small {
+    font-size: .6rem !important;
 }
 
 .wp-block-group__inner-container, .card_wrap {

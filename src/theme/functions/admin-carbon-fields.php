@@ -29,6 +29,8 @@ function custom_carbon_fields_front_page() {
         ->set_attribute( 'placeholder', 'Datum und Uhrzeit Event Start' )
         ->set_storage_format( 'U' )
         ->set_input_format( 'j. F Y G:i', 'j. F Y G:i' ),
+        Field::make('checkbox', 'crb_full_day_event', __('Ganztages Anlass') )
+        ->set_help_text( __( 'Setze das Häcken wenn es ein Ganztages Anlass ist' ) ),
         Field::make( 'map', 'crb_company_location', __( 'Location' ) )
         ->set_help_text( __( 'drag and drop the pin on the map to select location' ) )
         ->set_position( 47.376888, 8.541694, 12 ),
@@ -37,6 +39,74 @@ function custom_carbon_fields_front_page() {
         ->set_duplicates_allowed( false ),
         
     ));
+
+    /*
+    * Attachments Post Meta
+    */
+
+    Container::make( 'post_meta', 'Attachments' )
+    ->set_context( 'side' )
+    ->where( 'post_type', '=', 'post' )
+    ->add_fields( array(
+        Field::make( 'media_gallery', 'attachments', 'Attachments' )
+        ->set_type( array( 'application/pdf' ) )
+        ->set_duplicates_allowed( false ),
+    ));
+
+
+
+    /*
+    * User Meta
+    */
+
+    Container::make( 'user_meta', 'Profil Daten' )
+    ->add_fields( array(
+        Field::make( 'image', 'profil_bild', 'Profil BIld' ),
+        Field::make( 'text', 'profil_funktion', 'Funktion' )
+        //->set_attribute( 'placeholder', '(***) ***-****' )
+
+    ));
+
+    function awb_remove_user_profile_fields_with_css() {
+        //Hide unwanted fields in the user profile
+        $fieldsToHide = [
+            'rich-editing',
+            //'admin-color',
+            'comment-shortcuts',
+            'admin-bar-front',
+            'user-login',
+            //'role',
+            //'super-admin',
+            //'first-name', 
+            //'last-name', 
+            'nickname', 
+            'display-name', 
+            //'email',
+            'description', 
+            //'pass1', 
+            //'pass2', 
+            'sessions', 
+            'capabilities',
+            'syntax-highlighting',
+            'url'
+        
+            ];
+        
+            //add the CSS
+            foreach ($fieldsToHide as $fieldToHide) {
+                echo '<style>tr.user-'.$fieldToHide.'-wrap{ display: none; }</style>';
+            }
+        
+            //fields that don't follow the wrapper naming convention
+            echo '<style>tr.user-profile-picture{ display: none; }</style>';
+        
+            //all subheadings
+            echo '<style>#your-profile h2{ display: none; }</style>';
+        }
+        add_action( 'admin_head-user-edit.php', 'awb_remove_user_profile_fields_with_css' );
+        add_action( 'admin_head-profile.php',   'awb_remove_user_profile_fields_with_css' );
+
+
 
 
     

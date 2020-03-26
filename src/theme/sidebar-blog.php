@@ -7,11 +7,11 @@
  * @package dravet
  */
 
-if ( ! is_active_sidebar( 'sidebar-2' ) ) {
+if ( ! is_active_sidebar( 'sidebar-3' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area sticky is-4 column" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-2' ); ?>
+<aside id="secondary" class="widget-area is-4 column" role="complementary">
+	<?php dynamic_sidebar( 'sidebar-3' ); ?>
 </aside><!-- #secondary -->
