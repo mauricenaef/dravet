@@ -117,3 +117,7 @@
 ul.mega-sub-menu {
     box-shadow:  0 8px 8px rgba(0,0,0,0.1) !important;
 }
+
+.search-icon::before {
+    color: $black !important;
+}

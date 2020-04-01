@@ -1561,6 +1561,7 @@ body:not(.home) .card .content p{font-size:.8rem}
 .site-header .custom-logo-link{max-width:16rem}
 .site-header .navbar-search{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:.5rem;margin-right:1em}
 ul.mega-sub-menu{-webkit-box-shadow:0 8px 8px rgba(0,0,0,0.1) !important;box-shadow:0 8px 8px rgba(0,0,0,0.1) !important}
+.search-icon::before{color:#0a0a0a !important}
 .content-area aside section{max-width:15rem;margin-bottom:2rem}
 .site-content{background-color:white;scroll-behavior:smooth}
 .site-content .featured-image{margin-top:-0.8rem;margin-bottom:-0.3rem}

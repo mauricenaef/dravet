@@ -22,8 +22,7 @@ get_header(); ?>
 	<div class="columns">
 		<main id="main" class="site-main is-7 column" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content' ); ?>
-				<?php bulmastarter_get_comments(); ?>
+                <?php get_template_part( 'template-parts/content' ); ?>
 			<?php endwhile; ?>
 		</main><!-- #main -->
 		<aside id="secondary" class="is-4 is-offset-1 column" role="complementary">

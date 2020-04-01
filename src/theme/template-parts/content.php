@@ -11,12 +11,14 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="container-d">
 		<header class="content">
-			<?php if ( is_single() ) : ?>
+			<?php if ( is_front_page()) :?>
+			<?php elseif ( is_single() ) : ?>
 				<?php bulmastarter_the_title('is-1', FALSE); ?>
 			<?php elseif ( 'page' === get_post_type() ) : ?>
 				<?php bulmastarter_the_title('is-1', FALSE); ?>
 			<?php else : ?>
 				<?php bulmastarter_the_title('is-1'); ?>
+			
 			<?php endif; ?>
 			<?php if ( 'post' === get_post_type() ) : ?>
 				<div class="subtitle is-6">
