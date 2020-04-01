@@ -1,5 +1,6 @@
-.wp-block-button__link {
-    font-size: 90%;
+.wp-block-button__link, .woocommerce a.button {
+    font-size: 75%;
+    font-weight: 600;
     background-color: white;
     border-color: #dbdbdb;
     border-width: 1px;
@@ -9,16 +10,16 @@
     -ms-flex-pack: center;
     justify-content: center;
     padding-bottom: 0.375em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    padding-top: 0.375em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-top: 0.55em;
     text-align: center;
     white-space: nowrap;
     opacity: 1;
     margin-bottom: 1em;
     line-height: 1.4;
     border-radius: 100px;
-    &.has-white-color {
+    &.has-white-color, &.add_to_cart_button, &.product_type_variable {
         color: $white;
     }
     &.has-black-color {
@@ -27,7 +28,7 @@
     &.has-purple-background-color {
         background-color: $primary;
     }
-    &.has-green-background-color {
+    &.has-green-background-color, &.add_to_cart_button, &.product_type_variable {
         background-color: $green;
     }
     &.has-grey-background-color {
