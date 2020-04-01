@@ -1,8 +1,14 @@
-.card {
+.card, .card_quer {
     border-radius: 3px;
     border: none;
     p {
         line-height: 1.7;
+    }
+    a {
+        color: $green !important;
+        &:hover, &:focus {
+            color: $grey-light !important;
+        }
     }
 }
 
@@ -84,9 +90,10 @@
 body:not(.home) .card {
     .title {
         margin-bottom: .75em;
+        color: $green !important;
     }
     time {
-        color: $green;
+        color: $primary;
         font-size: .8rem;
     }
     .content {

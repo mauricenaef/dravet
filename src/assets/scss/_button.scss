@@ -1,0 +1,39 @@
+.wp-block-button__link {
+    font-size: 90%;
+    background-color: white;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 0.375em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.375em;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 1;
+    margin-bottom: 1em;
+    line-height: 1.4;
+    border-radius: 100px;
+    &.has-white-color {
+        color: $white;
+    }
+    &.has-black-color {
+        color: $black;
+    }
+    &.has-purple-background-color {
+        background-color: $primary;
+    }
+    &.has-green-background-color {
+        background-color: $green;
+    }
+    &.has-grey-background-color {
+        background-color: $grey;
+    }
+    &:hover, &:focus {
+        opacity: .7;
+    }
+}
