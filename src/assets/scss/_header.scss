@@ -121,3 +121,9 @@ ul.mega-sub-menu {
 .search-icon::before {
     color: $black !important;
 }
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1280px) {
+    #mega-menu-wrap-primary {
+        margin: 0 1rem 1rem 1rem !important;
+    }
+}
