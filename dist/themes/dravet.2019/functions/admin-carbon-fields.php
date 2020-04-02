@@ -19,6 +19,43 @@ add_action( 'carbon_fields_register_fields', 'custom_carbon_fields_front_page' )
 function custom_carbon_fields_front_page() {
     
     /*
+    * Front Page
+    */
+    Container::make( 'post_meta', 'Front Call to Action' )
+    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->add_fields( array( 
+        Field::make( 'text', 'spenden_titel', 'Spenden Titel' ),
+        Field::make( 'rich_text', 'spenden_content', 'Spenden Inhalt' ),
+        Field::make( 'textarea', 'spenden_info', 'Spenden Info' ),
+    ) );
+
+    Container::make( 'post_meta', 'Front News Sektion' )
+    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->add_fields( array( 
+        Field::make( 'association', 'news_category', 'Kategorie Links' )
+        ->set_types( array(
+            array(
+                'type' => 'term',
+                'taxonomy' => 'category',
+            )
+        ) )
+        ->set_max( 1 ),
+        Field::make( 'urlpicker', 'news_link', 'Link Archive' ),
+        Field::make( 'media_gallery', 'news_gallery', 'Bilder Galerie' )
+        ->set_type( array( 'image' ) )
+        ->set_duplicates_allowed( false ),
+        
+    ) );
+
+    Container::make( 'post_meta', 'Front Mixed Content' )
+    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->add_fields( array( 
+        Field::make( 'rich_text', 'mixed_content', 'Inhalt Container' ),
+        Field::make( 'urlpicker', 'mixed_downloads', 'Link Downloads' ),
+    ) );
+
+
+    /*
     * Event Post Meta
     */
 

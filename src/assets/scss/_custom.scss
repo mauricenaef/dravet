@@ -10,6 +10,23 @@
             color: $grey-light !important;
         }
     }
+    .card-footer-item {
+        &.level-left {
+            border-right: 0;
+        }
+    }
+}
+
+.card_wrap .card {
+    .card-content {
+        padding-bottom: 0;
+    }
+}
+
+.media-content {
+    .button {
+        margin-top: 1rem;
+    }
 }
 
 .has-boxshadow {
@@ -187,6 +204,8 @@ body:not(.home) .card {
         margin: auto;
         max-width: 1400px;
         grid-auto-flow: dense;
+   
+
         figure {
             margin: 0;
         }
@@ -207,4 +226,8 @@ body:not(.home) .card {
                 font-size: 90%;
             }
         }
+}
+
+.spacer {
+    margin: 2rem 0;
 }

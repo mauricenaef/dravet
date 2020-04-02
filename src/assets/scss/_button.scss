@@ -38,3 +38,9 @@
         opacity: .7;
     }
 }
+
+.home .button {
+    &.is-link {
+        color: $white !important;
+    }
+}

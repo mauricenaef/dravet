@@ -12,7 +12,7 @@
         <div class="card-image">
             <figure class="image">
 				<?php if ( has_post_thumbnail() ): ?>
-					<?php echo wp_get_attachment_image( 200, 'card-header', false, array( 'class' => 'hero' ) ); ?>
+					<?php  the_post_thumbnail( 'card-header', ['class' => 'hero'] ); ?>
 				<?php else : ?>
 					<img src="https://placehold.it/270x180&text=Platzhalter" class="hero" />
 				<?php endif; ?>
