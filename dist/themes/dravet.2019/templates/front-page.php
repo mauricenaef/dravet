@@ -129,18 +129,6 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
 <section class="section mixed-section has-background-light">
     <div class="container">
         <h1 class="title is-size-7 is-hidden"><?php _e('Mixed Content', 'dravet'); ?></h1>
-        <!-- <div class="columns is-centered mixed-nav">
-            <div class="column is-centered is-flex">
-                <div class="field has-addons">
-                    <p class="control">
-                        <button class="button is-small is-primary is-rounded"><?php _e('Aktuelles', 'dravet'); ?></button>
-                    </p>
-                    <p class="control">
-                        <button class="button is-small is-rounded"><?php _e('Shop', 'dravet'); ?></button>
-                    </p>
-                </div>
-            </div>
-        </div> -->
         <div class="columns">
             <div class="column is-6">
                 <div class="card has-boxshadow">
@@ -169,7 +157,7 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
                             <ul class="glide__slides">
                                 <?php foreach ( $users as $user ) { 
                                     $profilbild = carbon_get_user_meta( $user->ID, 'profil_bild' );
-                                    $funktion = carbon_get_user_meta( $user->ID, 'profil_funktion' );    
+                                    $funktion = carbon_get_user_meta( $user->ID, 'profil_funktion_' . (pll_current_language('slug')) );  
                                 ?>
                                 <li class="glide__slide">
                                     <div class="card-image">

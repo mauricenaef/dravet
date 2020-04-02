@@ -100,7 +100,8 @@ function custom_carbon_fields_front_page() {
     Container::make( 'user_meta', 'Profil Daten' )
     ->add_fields( array(
         Field::make( 'image', 'profil_bild', 'Profil BIld' ),
-        Field::make( 'text', 'profil_funktion', 'Funktion' )
+        Field::make( 'text', 'profil_funktion_de', 'Funktion (Deutsch)' ),
+        Field::make( 'text', 'profil_funktion_fr', 'Funktion (Französisch)' ),
         //->set_attribute( 'placeholder', '(***) ***-****' )
 
     ));
