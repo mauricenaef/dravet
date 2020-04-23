@@ -19,7 +19,7 @@ Tags:
 
 // Set your brand colors
 $dark-brown:  hsl(241, 30%, 31%);
-$green: hsl(94, 42%, 58%);
+$green: hsl(95, 42%, 38%);
 $light-brown: hsl(0, 0%, 50%);
 $beige-light: hsl(120, 3%, 94%);
 $beige-lighter: hsl(0, 0%, 76%);
@@ -149,9 +149,9 @@ $badge-z-index: 99 !default;
 @import 'woocommerce';
 
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-//@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @import 'glidejs';
 
+@import "node_modules/lightgallery.js/src/sass/lightgallery.scss";
 
 /*
 PRINT STYLESHEET

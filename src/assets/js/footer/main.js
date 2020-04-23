@@ -44,9 +44,10 @@
 		headings.push(this.innerText);
 	});
 
-	console.log(headings);
+	//console.log(headings);
 	// Create Sidebar Article Navigation
 	//const index = 1;
+	
 	const $ul = $('<ul>', {class: "article_nav_list"}).append(
 		headings.map( ( heading, index ) => 
 		  $('<li>').append($('<a href="#Kapitel_' + index +'">').text(heading))

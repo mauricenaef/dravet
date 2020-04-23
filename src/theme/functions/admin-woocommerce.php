@@ -72,6 +72,9 @@ function lv2_add_bulma_input_classes( $args, $key, $value = null ) {
 
   
 add_filter( 'woocommerce_breadcrumb_defaults', 'dravet_woocommerce_breadcrumbs' );
+
+add_filter( 'woocommerce_show_page_title', '__return_false' );
+
 function dravet_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => '',
@@ -97,3 +100,5 @@ function woocommerce_remove_breadcrumb(){
   }
   
   add_action( 'woo_custom_breadcrumb', 'woocommerce_custom_breadcrumb' );
+
+  

@@ -1,4 +1,11 @@
 .ginput_container {
+    &.ginput_container_radio li, &.ginput_container_checkbox li  {
+        overflow: visible !important;
+        margin-left: .5em !important;
+        input {
+            margin-right: 1em !important;
+        }
+    }
     span {
         margin-bottom: 1rem;
     }
