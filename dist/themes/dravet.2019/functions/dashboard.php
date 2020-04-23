@@ -20,7 +20,7 @@ add_action('admin_menu', 'disable_default_dashboard_widgets');
 // Add some CSS to Style the list
 function dashboard_print_styles() {
 
-	wp_register_style( 'admin_styles', get_template_directory_uri() .'/inc/style/admin.css');
+	wp_register_style( 'admin_styles', get_template_directory_uri() .'admin.min.css');
 	
  	wp_enqueue_style('admin_styles');
 }

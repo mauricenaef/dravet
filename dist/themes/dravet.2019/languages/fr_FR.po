@@ -1,0 +1,912 @@
+# Copyright (C) 2020 dravet
+# This file is distributed under the same license as the dravet package.
+msgid ""
+msgstr ""
+"Project-Id-Version: dravet\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Maurice Naef <me@mauricenaef.ch>\n"
+"Report-Msgid-Bugs-To: https://mauricenaef.ch\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: Marcel Maurice Naef <me@mauricenaef.ch>\n"
+"Language: fr\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: fonts\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups ! Cette page est introuvable."
+
+#: 404.php:21
+#, fuzzy
+msgid "It looks like nothing was found at this location. Maybe try the search?"
+msgstr ""
+"Il semble que rien n’a été trouvé à cet endroit. Peut-être essayer la "
+"recherche?"
+
+#: comments.php:32
+msgid "Comments"
+msgstr "Commentaires"
+
+#: comments.php:36
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un commentaire sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s réactions sur &ldquo;%2$s&rdquo;"
+
+#: comments.php:50 comments.php:70
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: comments.php:52 comments.php:72
+msgid "Newer Comments"
+msgstr "Commentaires récents"
+
+#: comments.php:53 comments.php:73
+msgid "Older Comments"
+msgstr "Commentaires plus anciens"
+
+#: comments.php:88
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: comments.php:95
+msgid "Your comment"
+msgstr "Votre commentaire"
+
+#: comments.php:97
+msgid "Your Name"
+msgstr "Votre nom"
+
+#: comments.php:98
+msgid "Your Email"
+msgstr "Votre Email"
+
+#: functions/admin-brands.php:9
+msgctxt "Post Type General Name"
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#: functions/admin-brands.php:10
+msgctxt "Post Type Singular Name"
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#: functions/admin-brands.php:11 functions/admin-brands.php:26
+#: functions/admin-brands.php:27
+msgid "Partner"
+msgstr "Partenaire"
+
+#: functions/admin-brands.php:12
+msgid "Sponsor"
+msgstr "Sponsor"
+
+#: functions/admin-brands.php:13
+#, fuzzy
+msgid "Sponsor:"
+msgstr "Sponsor:"
+
+#: functions/admin-brands.php:14
+#, fuzzy
+msgid "Alle Partner"
+msgstr "Alle Partner"
+
+#: functions/admin-brands.php:15 functions/admin-brands.php:17
+#, fuzzy
+msgid "Neuer Sponsor"
+msgstr "Parrain Neuer"
+
+#: functions/admin-brands.php:16
+#, fuzzy
+msgid "Neuer Sponsor hinzufügen"
+msgstr "Neuer Sponsor hinzufàgen"
+
+#: functions/admin-brands.php:18
+#, fuzzy
+msgid "Sponsor bearbeiten"
+msgstr "Sponsor bearbeiten"
+
+#: functions/admin-brands.php:19
+#, fuzzy
+msgid "Sponsor aktualisieren"
+msgstr "Sponsor aktualisieren"
+
+#: functions/admin-brands.php:20
+#, fuzzy
+msgid "Sponsor ansehen"
+msgstr "Sponsor ansehen"
+
+#: functions/admin-brands.php:21
+#, fuzzy
+msgid "Sponsor suchen"
+msgstr "Parrainer suchen"
+
+#: functions/admin-brands.php:22 functions/admin-faq.php:22
+#: functions/admin-faq.php:81
+#, fuzzy
+msgid "Nichts gefunden"
+msgstr "Nichts gefunden"
+
+#: functions/admin-brands.php:23
+#, fuzzy
+msgid "Im Papierkorb wurde nichts gefunden"
+msgstr ""
+"Im Papierkorb wurde nichts gefunden Im Papierkorb wurde nichts gefunden Im "
+"Papierkorb wurde nichts gefunden Im Papier"
+
+#: functions/admin-carbon-fields.php:66
+#, fuzzy
+msgid "Event Datum"
+msgstr "Événement Datum"
+
+#: functions/admin-carbon-fields.php:70
+#, fuzzy
+msgid "Ganztages Anlass"
+msgstr "Ganztages Anlass"
+
+#: functions/admin-carbon-fields.php:71
+#, fuzzy
+msgid "Setze das Häcken wenn es ein Ganztages Anlass ist"
+msgstr "Setze das Hàcken wenn es ein Ganztages Anlass ist"
+
+#: functions/admin-carbon-fields.php:72
+msgid "Location"
+msgstr "Emplacement"
+
+#: functions/admin-carbon-fields.php:73
+#, fuzzy
+msgid "drag and drop the pin on the map to select location"
+msgstr ""
+"faire glisser et laisser tomber la broche sur la carte pour sélectionner "
+"l’emplacement"
+
+#: functions/admin-carbon-fields.php:160 functions/admin-carbon-fields.php:162
+#, fuzzy
+msgid "Card Element"
+msgstr "Élément de carte"
+
+#: functions/admin-carbon-fields.php:165
+#, fuzzy
+msgid "Element Titel"
+msgstr "Élément Titel"
+
+#: functions/admin-carbon-fields.php:166
+#, fuzzy
+msgid "Element Subtitel Titel (optional)"
+msgstr "Élément Subtitel Titel (facultatif)"
+
+#: functions/admin-carbon-fields.php:167
+#, fuzzy
+msgid "Layout Quer"
+msgstr "Mise en page Quer"
+
+#: functions/admin-carbon-fields.php:168
+#, fuzzy
+msgid "Element Bild / Logo"
+msgstr "Élément Bild / Logo"
+
+#: functions/admin-carbon-fields.php:171
+#, fuzzy
+msgid "Inhalt"
+msgstr "Inhalt.indd"
+
+#: functions/admin-carbon-fields.php:180 functions/admin-carbon-fields.php:347
+#, fuzzy
+msgid "Dravet Blöcke"
+msgstr "Dravet Blcke"
+
+#: functions/admin-carbon-fields.php:332 functions/admin-carbon-fields.php:334
+msgid "FAQ Element"
+msgstr "FAQ pour les éléments"
+
+#: functions/admin-carbon-fields.php:337
+#, fuzzy
+msgid "Frage"
+msgstr "Frage"
+
+#: functions/admin-carbon-fields.php:338
+#, fuzzy
+msgid "Antwort"
+msgstr "Antwort (Antwort)"
+
+#: functions/admin-faq.php:6
+msgctxt "Post Type General Name"
+msgid "FAQs"
+msgstr "FAQs"
+
+#: functions/admin-faq.php:7
+msgctxt "Post Type Singular Name"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: functions/admin-faq.php:8 functions/admin-faq.php:9
+#: functions/admin-faq.php:35
+msgid "FAQ"
+msgstr "FAQ"
+
+#: functions/admin-faq.php:10
+#, fuzzy
+msgid "Element Archiv"
+msgstr "Archiv des éléments"
+
+#: functions/admin-faq.php:11
+#, fuzzy
+msgid "Element Attribute"
+msgstr "Attribut d’élément"
+
+#: functions/admin-faq.php:12 functions/admin-faq.php:70
+#, fuzzy
+msgid "Eltern Element:"
+msgstr "Eltern Élément:"
+
+#: functions/admin-faq.php:13
+#, fuzzy
+msgid "Alle Elemente"
+msgstr "Alle Elemente"
+
+#: functions/admin-faq.php:14 functions/admin-faq.php:16
+#, fuzzy
+msgid "Neues Element"
+msgstr "Élément Neues"
+
+#: functions/admin-faq.php:15
+#, fuzzy
+msgid "Hinzufügen"
+msgstr "Hinzuf-gen"
+
+#: functions/admin-faq.php:17
+#, fuzzy
+msgid "Bearbeiten"
+msgstr "Bearbeiten Bearbeiten"
+
+#: functions/admin-faq.php:18
+#, fuzzy
+msgid "Aktualisieren"
+msgstr "Aktualisieren Aktualisieren"
+
+#: functions/admin-faq.php:19
+#, fuzzy
+msgid "Anschauen"
+msgstr "Anschauen Anschauen Anschauen"
+
+#: functions/admin-faq.php:20
+#, fuzzy
+msgid "Elemente Anschauen"
+msgstr "Elemente Anschauen"
+
+#: functions/admin-faq.php:21 functions/admin-faq.php:80
+msgid "Suchen"
+msgstr "Rechercher"
+
+#: functions/admin-faq.php:23
+#, fuzzy
+msgid "Im Abfall Eimer nichts gefunden"
+msgstr "Im Abfall Eimer nichts gefunden"
+
+#: functions/admin-faq.php:24
+#, fuzzy
+msgid "Beitragsbild"
+msgstr "Beitragsbild Beitragsbild"
+
+#: functions/admin-faq.php:25
+#, fuzzy
+msgid "Beitragsbild setzen"
+msgstr "Beitragsbild setzen"
+
+#: functions/admin-faq.php:26
+#, fuzzy
+msgid "Beitragsbild entfernen"
+msgstr "Beitragsbild entfernen"
+
+#: functions/admin-faq.php:27
+#, fuzzy
+msgid "Als Beitragsbild benutzen"
+msgstr "Als Beitragsbild benutzen"
+
+#: functions/admin-faq.php:28
+#, fuzzy
+msgid "Einfügen"
+msgstr "Einfàgen"
+
+#: functions/admin-faq.php:29
+#, fuzzy
+msgid "Zum element hochladen"
+msgstr "Zum élément hochladen"
+
+#: functions/admin-faq.php:30 functions/admin-faq.php:83
+#, fuzzy
+msgid "Elemente Liste"
+msgstr "Liste Élémentaire"
+
+#: functions/admin-faq.php:31
+#, fuzzy
+msgid "Elemente Liste in Navigation"
+msgstr "Liste élémentaire dans la navigation"
+
+#: functions/admin-faq.php:32
+#, fuzzy
+msgid "Elemente Filtern"
+msgstr "Filtrement d’élémentaire"
+
+#: functions/admin-faq.php:36
+msgid "Frequently Asked Questions"
+msgstr "Questions fréquentes"
+
+#: functions/admin-faq.php:65
+#, fuzzy
+msgctxt "Taxonomy General Name"
+msgid "FAQ Kategorien"
+msgstr "FAQ Kategorien"
+
+#: functions/admin-faq.php:66
+#, fuzzy
+msgctxt "Taxonomy Singular Name"
+msgid "FAQ Kategorie"
+msgstr "FAQ Kategorie"
+
+#: functions/admin-faq.php:67
+msgid "Kategorie"
+msgstr "Catégorie"
+
+#: functions/admin-faq.php:68
+#, fuzzy
+msgid "Alle Kategorien"
+msgstr "Alle Kategorien"
+
+#: functions/admin-faq.php:69
+#, fuzzy
+msgid "Eltern Kategorie"
+msgstr "Eltern Kategorie"
+
+#: functions/admin-faq.php:71
+#, fuzzy
+msgid "Neue Kategorie"
+msgstr "Neue Kategorie"
+
+#: functions/admin-faq.php:72
+#, fuzzy
+msgid "Kategorie hinzufügen"
+msgstr "Kategorie hinzufàgen"
+
+#: functions/admin-faq.php:73
+#, fuzzy
+msgid "Kategorie bearbeiten"
+msgstr "Kategorie bearbeiten"
+
+#: functions/admin-faq.php:74
+#, fuzzy
+msgid "Kategorie aktualisieren"
+msgstr "Kategorie aktualisieren"
+
+#: functions/admin-faq.php:75
+#, fuzzy
+msgid "Kategorie anschauen"
+msgstr "Kategorie anschauen"
+
+#: functions/admin-faq.php:76
+#, fuzzy
+msgid "Mit Kommas trennen"
+msgstr "Mit Kommas trennen"
+
+#: functions/admin-faq.php:77
+#, fuzzy
+msgid "Hinzufügen oder entfernen"
+msgstr "Hinzuf-gen oder entfernen"
+
+#: functions/admin-faq.php:78
+#, fuzzy
+msgid "Wähle von den meistbenutzten Kategorien aus"
+msgstr "Wôhle von den meistbenutzten Kategorien aus"
+
+#: functions/admin-faq.php:79
+#, fuzzy
+msgid "Oft benutzte"
+msgstr "Benutzte Oft"
+
+#: functions/admin-faq.php:82
+#, fuzzy
+msgid "Keine Elemente"
+msgstr "Keine Elemente"
+
+#: functions/admin-faq.php:84
+#, fuzzy
+msgid "Elemente Liste Navigation"
+msgstr "Elemente Liste Navigation"
+
+#: functions/admin-faq.php:170
+#, fuzzy
+msgid "Häufige Fragen:"
+msgstr "Fragen hufige:"
+
+#: functions/admin-faq.php:187
+#, fuzzy
+msgid "FAQ werden geladen ..."
+msgstr "FAQ werden geladen ..."
+
+#: functions/admin-woocommerce-template.php:7
+#, fuzzy
+msgid "Kaufen"
+msgstr "Kaufen"
+
+#: functions/admin-woocommerce.php:82
+msgctxt "breadcrumb"
+msgid "Home"
+msgstr "Accueil"
+
+#: functions/admin.php:80
+msgid "Info"
+msgstr "Info"
+
+#: functions/admin.php:88
+#, fuzzy
+msgid "MAURICE NAEF webdesigner"
+msgstr "MAURICE NAEF webdesigner"
+
+#: functions/admin.php:95
+msgid "Zoom"
+msgstr "Zoom"
+
+#: functions/content.php:60
+#, fuzzy
+msgid "weiter lesen"
+msgstr "weiter lesen"
+
+#: functions/customizer.php:18
+#, fuzzy
+msgid "Logo (Footer)"
+msgstr "Logo (Footer)"
+
+#: functions/extras.php:57
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: functions/extras.php:59
+msgid "Archiv"
+msgstr "archive"
+
+#: functions/extras.php:91
+#, fuzzy
+msgid "Lila"
+msgstr "Lila"
+
+#: functions/extras.php:96
+#, fuzzy
+msgid "Grün"
+msgstr "Grün"
+
+#: functions/extras.php:101
+#, fuzzy
+msgid "Grau"
+msgstr "Grau"
+
+#: functions/extras.php:106
+#, fuzzy
+msgid "Weiss"
+msgstr "Weiss"
+
+#: functions/extras.php:111
+#, fuzzy
+msgid "Schwarz"
+msgstr "Schwarz"
+
+#: functions/navigation.php:10
+#, fuzzy
+msgid "Headernavigation"
+msgstr "Headernavigation (en)"
+
+#: functions/navigation.php:11
+#, fuzzy
+msgid "Hauptnavigation"
+msgstr "Hauptnavigation"
+
+#: functions/navigation.php:12
+#, fuzzy
+msgid "Fusszeile 1"
+msgstr "Fusszeile 1"
+
+#: functions/navigation.php:13
+#, fuzzy
+msgid "Fusszeile 2"
+msgstr "Fusszeile 2"
+
+#: functions/navigation.php:14
+#, fuzzy
+msgid "Fusszeile 3"
+msgstr "Fusszeile 3"
+
+#: functions/navigation.php:15
+#, fuzzy
+msgid "Fusszeile 4"
+msgstr "Fusszeile 4"
+
+#: functions/navigation.php:16
+#, fuzzy
+msgid "Fusszeile 5"
+msgstr "Fusszeile 5"
+
+#: functions/navigation.php:17
+#, fuzzy
+msgid "Fusszeile 6"
+msgstr "Fusszeile 6 Annonces"
+
+#: functions/navigation.php:18
+#, fuzzy
+msgid "Fusszeile 7"
+msgstr "Fusszeile 7 Annonces"
+
+#: functions/navigation.php:19
+#, fuzzy
+msgid "Quicklinks"
+msgstr "Quicklinks"
+
+#: functions/pagination.php:21
+msgid "Older posts"
+msgstr "Articles plus anciens"
+
+#: functions/pagination.php:22
+msgid "Newer posts"
+msgstr "Articles plus récents"
+
+#: functions/pagination.php:23
+msgid "Posts navigation"
+msgstr "Navigation des articles"
+
+#: functions/search.php:14
+msgid "Search for:"
+msgstr "Recherche pour :"
+
+#: functions/search.php:16
+msgid "Submit"
+msgstr "Envoyer"
+
+#: functions/template-tags.php:26
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr "%s"
+
+#: functions/template-tags.php:31
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "par %s"
+
+#: functions/template-tags.php:48 functions/template-tags.php:54
+msgid ", "
+msgstr ", "
+
+#: functions/template-tags.php:50
+#, fuzzy, php-format
+msgid "Geschrieben in %1$s"
+msgstr "Geschrieben en %1$s"
+
+#: functions/template-tags.php:56
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Étiqueté %1$s"
+
+#: functions/template-tags.php:63
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Laisser un commentaire <span class=\"screen-reader-text\">sur %s</span>"
+
+#: functions/template-tags.php:70 template-parts/content-page.php:33
+#, php-format
+msgid "Edit %s"
+msgstr "Modifier %s"
+
+#: functions/theme_custom_widget_article_navigation.php:22
+#: functions/theme_custom_widget_article_navigation.php:51
+#: functions/theme_widget_nav.php:19
+#, fuzzy
+msgid "Artikel Navigation"
+msgstr "Artikel Navigation"
+
+#: functions/theme_custom_widget_article_navigation.php:25
+#: functions/theme_widget_nav.php:22
+#, fuzzy
+msgid "Artikel Navigation Widget"
+msgstr "Artikel Navigation Widget"
+
+#: functions/theme_custom_widget_article_navigation.php:56
+#: functions/theme_widget_nav.php:54
+msgid "Title:"
+msgstr "Titre:"
+
+#: functions/theme_widget_nav.php:49
+#, fuzzy
+msgid "Titel"
+msgstr "Titel"
+
+#: functions/widgets.php:19
+#, fuzzy
+msgid "Sidebar Standard"
+msgstr "Norme sidebar"
+
+#: functions/widgets.php:21 functions/widgets.php:30 functions/widgets.php:39
+msgid "Add widgets here."
+msgstr "Ajouter des widgets ici."
+
+#: functions/widgets.php:28
+#, fuzzy
+msgid "Sidebar Artikel"
+msgstr "Barre latérale Artikel"
+
+#: functions/widgets.php:37
+#, fuzzy
+msgid "Sidebar Blog / Beiträge"
+msgstr "Blog Sidebar / Beitràge"
+
+#: search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour : %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: template-parts/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=\"%1$s\">Commencez ici</a>."
+
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond à vos termes de recherche. Veuillez "
+"réessayer avec d'autres mots-clés."
+
+#: template-parts/content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semble que ce que vous cherchez est introuvable. Essayez une autre "
+"recherche."
+
+#: template-parts/content-page.php:21 template-parts/content.php:46
+msgid "Pages:"
+msgstr "Pages :"
+
+#: template-parts/content-post.php:40
+#, fuzzy
+msgid "Publiziert am"
+msgstr "Publiziert am"
+
+#: template-parts/content.php:34
+#, fuzzy, php-format
+msgid "Weiterlesen %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Weiterlesen <span class=\"meta-nav\">%s</span>"
+
+#: templates/front-page.php:92
+#, fuzzy
+msgid "Aktuell"
+msgstr "Aktuell"
+
+#: templates/front-page.php:114
+msgid "Alle"
+msgstr "Tous"
+
+#: templates/front-page.php:131
+#, fuzzy
+msgid "Mixed Content"
+msgstr "Contenu mixte"
+
+#: templates/front-page.php:142
+#, fuzzy
+msgid "Vorstand"
+msgstr "Vorstand Vorstand"
+
+#: templates/front-page.php:169
+#, fuzzy
+msgid "Profil Ansehen"
+msgstr "Profil Ansehen"
+
+#: templates/front-page.php:194
+#, fuzzy
+msgid "Jahresberichte"
+msgstr "Jahresberichte Jahresberichte"
+
+#: templates/front-page.php:212
+#, fuzzy
+msgid "zu den Downloads"
+msgstr "zu den Téléchargements"
+
+#: templates/front-page.php:221
+msgid "Zukünftige Veranstaltungen"
+msgstr "Événements futurs"
+
+#: templates/front-page.php:259
+#, fuzzy
+msgid "Vergangene Veranstaltungen"
+msgstr "Vergangene Veranstaltungen"
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:243
+#, fuzzy
+msgid "The parent must be 'array', 'string' or 'null'."
+msgstr "Le parent doit être 'array', 'string' ou 'null'."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:272
+#, fuzzy
+msgid "The position of inner blocks must be 'above' or 'below'."
+msgstr ""
+"La position des blocs intérieurs doit être « au-dessus » ou « ci-dessous »."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:290
+#, fuzzy
+msgid "The template must be an 'array' or 'null'."
+msgstr "Le modèle doit être un «tableau» ou «null»."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:308
+#, fuzzy
+msgid "The template lock must be 'all', 'insert', 'false' or 'null'."
+msgstr "Le verrou de modèle doit être ' tout', 'insert', 'faux' ou 'null'."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:326
+#, fuzzy
+msgid "The allowed blocks must be an 'array' or 'null'."
+msgstr "Les blocs autorisés doivent être un «tableau» ou «null»."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:393
+#, fuzzy
+msgid "'render_callback' is required for the blocks."
+msgstr "'render_callback' est nécessaire pour les blocs."
+
+#: vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:397
+msgid "'render_callback' must be a callable."
+msgstr "'render_callback'doit être une fonction"
+
+#: vendor/htmlburger/carbon-fields/core/Container/Container.php:727
+msgid "General"
+msgstr "Général"
+
+#: vendor/htmlburger/carbon-fields/core/Container/Theme_Options_Container.php:207
+msgid "Settings saved."
+msgstr "Paramètres sauvegardés."
+
+#: vendor/htmlburger/carbon-fields/core/Field/Footer_Scripts_Field.php:20
+msgid ""
+"If you need to add scripts to your footer (like Google Analytics tracking "
+"code), you should enter them in this box."
+msgstr ""
+"Si vous avez besoin d'ajouter des scripts dans votre pied de page (un code "
+"Google Analytics, par exemple), vous devez le saisir dans cette case."
+
+#: vendor/htmlburger/carbon-fields/core/Field/Gravity_Form_Field.php:47
+msgid "No form"
+msgstr "Aucun formulaire"
+
+#: vendor/htmlburger/carbon-fields/core/Field/Header_Scripts_Field.php:20
+msgid "If you need to add scripts to your header, you should enter them here."
+msgstr ""
+"Si vous avez besoin d’ajouter des scripts dans votre header, vous devez les "
+"entrer ici."
+
+#: vendor/htmlburger/carbon-fields/core/Field/Sidebar_Field.php:74
+msgctxt "sidebar"
+msgid "Add New"
+msgstr "Ajouter"
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:69
+#, fuzzy
+msgid "Please enter a name for the sidebar."
+msgstr "S’il vous plaît entrer un nom pour la barre latérale."
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:72
+msgid "Unknown action attempted."
+msgstr "Action inconnue essayée."
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:102
+msgid "Sidebar with the same ID is already registered."
+msgstr "Une Barre latérale portant le même ID existe déjà."
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:112
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:142
+msgid ""
+"Failed to update option storing your custom sidebars. Please contact support."
+msgstr ""
+"Échec de la mise à jour de l'option de stockage de vos barres latérales "
+"personnalisées. Veuillez contacter le support."
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:137
+msgid "Sidebar not found."
+msgstr "La barre latérale n'a pas été trouvée."
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:181
+msgid "Add Sidebar"
+msgstr "Ajouter une barre latérale"
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:182
+msgid "Please enter the name of the new sidebar:"
+msgstr "Veuillez saisir le nom de la nouvelle barre latérale :"
+
+#: vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:183
+msgid "Are you sure you wish to remove this sidebar?"
+msgstr "Etes-vous sûr de vouloir supprimer cette barre latérale ?"
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:368
+#, fuzzy
+msgid "No option names provided"
+msgstr "Aucun nom d’option fourni"
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:379
+msgid "Theme Options updated."
+msgstr "Options de thème mises à jour."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:401
+#, fuzzy
+msgid "Sorry, you are not allowed to read blocks of this post."
+msgstr "Désolé, vous n'êtes pas autorisé à lire des blocs de ce post."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:411
+msgid "Sorry, you are not allowed to read blocks as this user."
+msgstr ""
+"Désolé, vous n'êtes pas autorisé à lire des blocs en tant que cet "
+"utilisateur."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:434
+#, fuzzy
+msgid "The name of the block."
+msgstr "Le nom du bloc."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:439
+#, fuzzy
+msgid "The content of the block."
+msgstr "Le contenu du bloc."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:443
+msgid "ID of the post context."
+msgstr "ID du contexte d'article."
+
+#: vendor/htmlburger/carbon-fields/core/REST_API/Router.php:474
+msgid "Invalid block."
+msgstr "Bloc invalide."
+
+#: vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:43
+msgid "Actions"
+msgstr "Actions"
+
+#: vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:52
+#, fuzzy
+msgid "Save Changes"
+msgstr "Sauvegarder les modifications"
+
+#: vendor/htmlburger/carbon-fields/templates/Container/widget.php:4
+msgid "No options are available for this widget."
+msgstr "Pas d’options disponibles pour ce widget."
+
+#: vendor/iamntz/carbon-fields-urlpicker/core/UrlPicker_Field.php:62
+msgid "Select Link"
+msgstr "Sélectionnez le lien"
+
+#: vendor/iamntz/carbon-fields-urlpicker/core/UrlPicker_Field.php:63
+msgid "Remove Link"
+msgstr "Supprimer le lien"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Vous devez être identifié pour commander."
+
+#: woocommerce/checkout/form-checkout.php:54
+msgid "Your order"
+msgstr "Votre commande"
