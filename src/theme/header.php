@@ -49,7 +49,7 @@
 						<?php if (is_user_logged_in()) : ?>
 							<a href="<?php echo wp_logout_url(get_permalink()); ?>"><?php svg_icon('logout'); ?> Logout</a>
 						<?php else : ?>
-							<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Login' ) ) ); ?>"><?php svg_icon('user'); ?> Login</a>
+							<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Mitgliederbereich' ) ) ); ?>"><?php svg_icon('user'); ?> Login</a>
 						<?php endif;?>
 					</div>
 				</div>

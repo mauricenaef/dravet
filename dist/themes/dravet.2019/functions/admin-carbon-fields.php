@@ -165,6 +165,7 @@ function custom_carbon_fields_front_page() {
             Field::make( 'text', 'title', __( 'Element Titel' ) ),
             Field::make( 'text', 'subtitle', __( 'Element Subtitel Titel (optional)' ) ),
             Field::make( 'checkbox', 'layout', __( 'Layout Quer' ) ),
+            Field::make( 'checkbox', 'media_type', __( 'Medien Element' ) ),
             Field::make( 'image', 'photo', __( 'Element Bild / Logo' ) ),
             Field::make( 'urlpicker', 'url_link', 'Verlinkung' )
             ->set_help_text( "Verlinkung des Cards" ),
@@ -185,6 +186,8 @@ function custom_carbon_fields_front_page() {
         ?>
         <?php
         if($fields['crb_slider'][0]['layout'] != '') {
+
+            $image_class = $fields['crb_slider'][0]['media_type'] == true ? 'no-icon' : 'is-rounded' ;
             ?>
             <div class="card_quer">
             <?php foreach ($fields['crb_slider'] as $block): ?>
@@ -193,10 +196,10 @@ function custom_carbon_fields_front_page() {
                         <figure class="image is-96x96">
                             <?php if($block['url_link']['url'] ) { ?>
                             <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>">
-                            <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => 'is-rounded' ) ); ?>
+                            <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => $image_class ) ); ?>
                             </a>
                             <?php } else { ?>
-                            <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => 'is-rounded' ) ); ?>
+                            <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => $image_class ) ); ?>
                             <?php } ?>
                         </figure>
                     </div>
@@ -228,7 +231,7 @@ function custom_carbon_fields_front_page() {
                     </div>
                     </div>
                     <div class="card-footer-item level-right">
-                        <?php svg_icon('navigation-menu-vertical', 'level-right'); ?>
+                        <?php //svg_icon('navigation-menu-vertical', 'level-right'); ?>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -278,7 +281,8 @@ function custom_carbon_fields_front_page() {
                 </div>
                 </div>
                 <div class="card-footer-item level-right">
-                    <?php svg_icon('navigation-menu-vertical', 'level-right'); ?>
+                    <?php //svg_icon('navigation-menu-vertical', 'level-right'); ?>
+                    <br>
                 </div>
             </div>
         <?php endforeach; ?>

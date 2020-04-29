@@ -61,3 +61,22 @@ function the_excerpt_more_link( $excerpt ){
     return $excerpt;
 }
 add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
+
+#------------------------------------------------------------------------------------
+# Add PDF
+#------------------------------------------------------------------------------------
+
+add_filter('media_send_to_editor', 'my_filter_pdf', 20, 3);
+
+function my_filter_pdf($html, $id) {
+    $attachment = get_post($id); //fetching attachment by $id passed through
+
+    $mime_type = $attachment->post_mime_type; //getting the mime-type
+    if ($mime_type == 'application/pdf') { //checking mime-type
+        $src = wp_get_attachment_url( $id );
+
+        $html = '<a href="'.$src.'" class="any-class-for-pdf-files">File</a>';
+        return $html; // return new $html    
+    }
+        return $html;
+}

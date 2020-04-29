@@ -10,9 +10,9 @@
     }
     .content-area {
         margin: 0 auto;
-        padding: 4rem 1.5rem 2rem;
+        padding: 1rem 1.5rem 2rem;
         @include from($desktop) {
-            //padding: 4rem 0 2rem;
+            padding: 4rem 1.5rem 2rem;
         }
     }
 }

@@ -26,6 +26,12 @@ $beige-lighter: hsl(0, 0%, 76%);
 $dark-blue: hsl(219, 100%, 24%);
 $dark-purple: hsl(249, 31%, 39%);
 
+$black:        hsl(0, 0%, 4%) !default;
+$black-bis:    hsl(0, 0%, 7%) !default;
+$black-ter:    hsl(0, 0%, 14%) !default;
+
+$grey-darker:  hsl(0, 0%, 21%) !default;
+
 // Update Bulma's global variables
 $family-sans-serif: "Open Sans", sans-serif;
 $grey-dark: $light-brown;
