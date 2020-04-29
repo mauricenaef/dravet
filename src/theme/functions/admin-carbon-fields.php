@@ -121,7 +121,7 @@ function custom_carbon_fields_front_page() {
             'nickname', 
             'display-name', 
             //'email',
-            'description', 
+            //'description', 
             //'pass1', 
             //'pass2', 
             'sessions', 
