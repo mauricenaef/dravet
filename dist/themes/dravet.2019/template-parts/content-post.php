@@ -14,7 +14,7 @@
 				<?php if ( has_post_thumbnail() ): ?>
 					<?php  the_post_thumbnail( 'card-header', ['class' => 'hero'] ); ?>
 				<?php else : ?>
-					<img src="https://placehold.it/270x180&text=Platzhalter" class="hero" />
+					<img src="<?php bloginfo('template_url') ?>/images/placeholder.png" class="hero" />
 				<?php endif; ?>
             </figure>
         </div>
@@ -33,11 +33,11 @@
 
 					$date_format = $fullday ? get_option('date_format') : 'j. F Y \u\m H:i \U\h\r';
 
-					echo '<p class="subtitle is-6"><time datetime="' . date_i18n( 'c', $event_date ) . '"><strong>' . date_i18n($date_format, $event_date ) . '</strong></time></p>';
+					echo '<p class="subtitle is-7"><time datetime="' . date_i18n( 'c', $event_date ) . '"><strong>' . date_i18n($date_format, $event_date ) . '</strong></time></p>';
 					
 				
 				} else {
-					echo '<p class="subtitle is-6"><time datetime="' . get_the_date('c') . '">' . __('Publiziert am', 'dravet') . ' ' . get_the_date(get_option('date_format')) . '</time></p>';
+					echo '<p class="subtitle is-7"><time datetime="' . get_the_date('c') . '">' . __('Publiziert am', 'dravet') . ' ' . get_the_date(get_option('date_format')) . '</time></p>';
 				}
 				
 				
@@ -66,7 +66,7 @@
 				?>
 			</div>
 			<div class="card-footer-item level-right">
-				<?php echo '<span class="tag is-small is-primary">' . $post_categories . '</span>'; ?> <?php svg_icon('navigation-menu-vertical', 'level-right'); ?>
+				<?php echo '<span class="tag is-small is-primary">' . $post_categories . '</span>'; ?>
 			</div>
 		</div>
     </div>

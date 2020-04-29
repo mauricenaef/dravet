@@ -30,6 +30,10 @@
 .card_wrap .card {
     .card-content {
         padding-bottom: 0;
+        p, ul li {
+            font-size: .8rem;
+            margin-bottom: 1em;
+        }
     }
 }
 
