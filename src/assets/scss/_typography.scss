@@ -48,6 +48,10 @@ hr {
     }
 }
 
+.current_page_item a {
+    color: $grey-darker;
+}
+
 .content p {
     color: $grey-darker;
     line-height: 1.8;
