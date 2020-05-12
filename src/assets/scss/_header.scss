@@ -21,16 +21,19 @@
             font-weight: 900;
         }
         &:first-of-type {
-            border-right: 1px solid;
-            padding-right: 1em;
+            //border-right: 1px solid;
+            //padding-right: .5em;
         }
     }
     .header-menu {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 1rem;
+        padding-left: 1rem;
+        border-left: 1px solid;
         li {
-            border-right: 1px solid;
+            //border-right: 1px solid;
             &:last-of-type {
                 border-right: none;
             }
@@ -38,8 +41,7 @@
                 font-weight: 900;
             }
             a {
-                padding: 0 1em;
-                line-height: 1.6;
+                padding: 0 1.25em;
                 display: block;
                 
             }
@@ -77,20 +79,23 @@
     }
     .navbar-menu {
         border-radius: 3px;
-        padding: 0 .25em;
+        padding: 0 .5em;
     }
     .top-nav {
         padding-top: 1rem;
         text-align: right;
         a {
             color: $grey-dark;
-            font-size: 12px;
+            font-size: 90%;
             &:hover, &:focus {
                 color: $link;
             }
             &.divider-right:after {
                 content: " |";
                 padding-left: .5em;
+            }
+            .icon {
+                margin-bottom: 3px;
             }
         }
     }

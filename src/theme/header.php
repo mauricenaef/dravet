@@ -44,7 +44,6 @@
 							}
 						}												
 						?>
-						<span>&nbsp;</span>
 						<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_class' => 'header-menu',) ); ?>
 						<?php if (is_user_logged_in()) : ?>
 							<a href="<?php echo wp_logout_url(get_permalink()); ?>"><?php svg_icon('logout'); ?> Logout</a>
