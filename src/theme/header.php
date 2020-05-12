@@ -38,6 +38,7 @@
 						$languages = pll_the_languages( array( 'raw' => 1 ) );
 						$item = '';
 						if($languages) {
+							svg_icon('globe_2'); 
 							foreach($languages as $language) {
 								$class = in_array( 'current-lang', $language['classes']) ? ' current_lang' : '';
 								echo '<a href="' . $language['url'] . '" class="level-item languages'. $class .'">' . $language['slug'] . '</a>';
@@ -45,6 +46,7 @@
 						}												
 						?>
 						<?php wp_nav_menu( array( 'theme_location' => 'header', 'container' => false, 'menu_class' => 'header-menu',) ); ?>
+						<?php //echo do_shortcode("[woo_cart_but]"); ?>
 						<?php if (is_user_logged_in()) : ?>
 							<a href="<?php echo wp_logout_url(get_permalink()); ?>"><?php svg_icon('logout'); ?> Logout</a>
 						<?php else : ?>

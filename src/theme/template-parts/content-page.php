@@ -16,7 +16,7 @@
 
 		<div class="content entry-content">
 			<?php the_content();?>
-
+			
 			<?php wp_link_pages( array(
 				'before' => '<div class="page-links level">' . esc_html__( 'Pages:', 'dravet' ),
 				'after'  => '</div>',

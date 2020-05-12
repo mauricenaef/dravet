@@ -1538,7 +1538,7 @@ body:not(.home) .card .content p{font-size:.8rem}
 .mixed-section .card-content ul{list-style-type:circle;padding-left:1rem;margin-left:.5rem}
 .is-small{font-size:.6rem !important}
 .wp-block-group__inner-container,.card_wrap{display:grid;grid-gap:40px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:auto;max-width:1400px;grid-auto-flow:dense}
-.wp-block-group__inner-container>article,.card_wrap>article{max-width:300px}
+.wp-block-group__inner-container>article,.wp-block-group__inner-container .card,.card_wrap>article,.card_wrap .card{max-width:300px}
 .wp-block-group__inner-container figure,.card_wrap figure{margin:0}
 .wp-block-group__inner-container .wp-block-organic-profile-block,.card_wrap .wp-block-organic-profile-block{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07);box-shadow:0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)}
 .wp-block-group__inner-container .wp-block-organic-profile-block .organic-profile-image,.card_wrap .wp-block-organic-profile-block .organic-profile-image{width:100%;height:12rem}
@@ -1556,6 +1556,7 @@ body:not(.home) .card .content p{font-size:.8rem}
 .home .button.is-link{color:white !important}
 .loading{width:3rem;margin:2rem auto}
 .site-header>.level{margin-bottom:1.8rem;padding:0 2rem}
+.site-header .icon{margin-right:.25em}
 .site-header .languages{text-transform:uppercase}
 .site-header .languages.current_lang{font-weight:900}
 .site-header .header-menu{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin-left:1rem;padding-left:1rem;border-left:1px solid}

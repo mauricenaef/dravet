@@ -18,9 +18,9 @@ if ( ! function_exists( 'bulmastarter_pagination' ) ) {
 		$args = wp_parse_args( $args, [
 			'mid_size'           => 2,
 			'prev_next'          => false,
-			'prev_text'          => __('Older posts', 'dravet'),
-			'next_text'          => __('Newer posts', 'dravet'),
-			'screen_reader_text' => __('Posts navigation', 'dravet'),
+			'prev_text'          => __('Ältere Artikel', 'dravet'),
+			'next_text'          => __('Neuere Artikel', 'dravet'),
+			'screen_reader_text' => __('Artikel Navigation', 'dravet'),
 			]);
 
 		$links     = paginate_links($args);
@@ -29,7 +29,7 @@ if ( ! function_exists( 'bulmastarter_pagination' ) ) {
 		$template  = apply_filters( 'navigation_markup_template', '
 			<nav class="navigation %1$s" role="navigation">
 				<h2 class="screen-reader-text">%2$s</h2>
-				<div class="nav-links level">%3$s<div class="page-numbers-container level">%4$s</div>%5$s</div>
+				<div class="nav-links level button">%3$s<div class="page-numbers-container level">%4$s</div>%5$s</div>
 			</nav>', $args, $class);
 
 		echo sprintf($template, $class, $args['screen_reader_text'], $next_link, $links, $prev_link);

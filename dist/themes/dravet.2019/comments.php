@@ -69,8 +69,8 @@ endif;
 				<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 					<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'dravet' ); ?></h2>
 					<div class="nav-links level">
-						<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'dravet' ) ); ?></div>
-						<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'dravet' ) ); ?></div>
+						<div class="nav-next button"><?php next_comments_link( esc_html__( 'Newer Comments', 'dravet' ) ); ?></div>
+						<div class="nav-previous button"><?php previous_comments_link( esc_html__( 'Older Comments', 'dravet' ) ); ?></div>
 					</div><!-- .nav-links -->
 				</nav><!-- #comment-nav-below -->
 				<?php

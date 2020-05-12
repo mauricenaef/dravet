@@ -235,7 +235,7 @@ body:not(.home) .card {
         max-width: 1400px;
         grid-auto-flow: dense;
 
-        > article {
+        > article, .card {
             max-width: 300px;
         }
 
