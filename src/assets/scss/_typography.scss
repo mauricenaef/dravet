@@ -36,15 +36,30 @@ hr {
     color: $green !important;
 }
 
-.title {
-    &.is-1 {
-        font-size: 2rem !important;
+.content .title {
+    &.is-1, h1 {
+        font-size: 1.8rem !important;
     }
-    &.is-2 {
-        font-size: 1.55rem !important;
+    &.is-2, h2 {
+        font-size: 1.25rem !important;
     }
-    &.is-3 {
-        font-size: 1.3rem !important;
+    &.is-3, h3 {
+        font-size: 1.125rem !important;
+    }
+}
+
+.content {
+    .is-4 {
+        font-size: 1.1rem !important;
+        opacity: .8;
+    }
+    .is-5 {
+        font-size: 1rem !important;
+        opacity: .8;
+    }
+    .is-6 {
+        font-size: .9rem !important;
+        opacity: .8;
     }
 }
 

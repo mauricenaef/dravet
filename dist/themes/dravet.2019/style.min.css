@@ -1483,9 +1483,12 @@ small{display:inline-block;line-height:1.4 !important;font-size:.6rem !important
 hr{margin:.5rem 0}
 .round{border-radius:20000px}
 .has-text-secondary{color:#5a8a38 !important}
-.title.is-1{font-size:2rem !important}
-.title.is-2{font-size:1.55rem !important}
-.title.is-3{font-size:1.3rem !important}
+.content .title.is-1,.content .title h1{font-size:1.8rem !important}
+.content .title.is-2,.content .title h2{font-size:1.25rem !important}
+.content .title.is-3,.content .title h3{font-size:1.125rem !important}
+.content .is-4{font-size:1.1rem !important;opacity:.8}
+.content .is-5{font-size:1rem !important;opacity:.8}
+.content .is-6{font-size:.9rem !important;opacity:.8}
 .current_page_item a{color:#363636}
 .content p{color:#363636;line-height:1.8}
 .card,.card_quer{border-radius:3px;border:0}
@@ -1494,6 +1497,7 @@ hr{margin:.5rem 0}
 .card a:not(.button):hover,.card a:not(.button):focus,.card_quer a:not(.button):hover,.card_quer a:not(.button):focus{color:#eff0ef !important}
 .card .card-footer,.card_quer .card-footer{margin-top:-2.2rem;border:0}
 .card .card-footer-item.level-left,.card_quer .card-footer-item.level-left{border-right:0}
+.card_quer{padding:.8rem 0}
 .card_wrap .card .card-content{padding-bottom:0}
 .card_wrap .card .card-content p,.card_wrap .card .card-content ul li{font-size:.8rem;margin-bottom:1em}
 .card :not(.card_quer) .image{border-bottom:1px solid whitesmoke}
