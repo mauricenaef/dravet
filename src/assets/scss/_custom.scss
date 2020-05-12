@@ -5,11 +5,15 @@
     p {
         line-height: 1.7;
     }
-    a {
+    a:not(.button) {
         color: $green !important;
         &:hover, &:focus {
             color: $grey-light !important;
         }
+    }
+    .card-footer {
+        margin-top: -2.2rem;
+        border: none;
     }
     .card-footer-item {
         &.level-left {
@@ -34,6 +38,12 @@
             font-size: .8rem;
             margin-bottom: 1em;
         }
+    }
+}
+
+.card :not(.card_quer) {
+    .image {
+        border-bottom: 1px solid lighten($beige-lighter, 20%);
     }
 }
 
@@ -221,7 +231,10 @@ body:not(.home) .card {
         margin: auto;
         max-width: 1400px;
         grid-auto-flow: dense;
-   
+
+        > article {
+            max-width: 300px;
+        }
 
         figure {
             margin: 0;

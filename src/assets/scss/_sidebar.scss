@@ -6,3 +6,9 @@
         }
     }
 }
+
+aside {
+    .current_page_item a {
+        color: $black-ter !important;
+    }
+}

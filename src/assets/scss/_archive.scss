@@ -2,12 +2,12 @@
     margin-top: 2rem;
     .card {
         a {
-            display: block;
+            //display: block;
             &.title {
                 margin-bottom: 0;
             }
             &.button {
-                color: $white;
+                color: $white !important;
             }
         }
     }

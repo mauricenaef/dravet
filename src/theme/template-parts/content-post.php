@@ -44,10 +44,17 @@
 				?>                
 			</div>
             <div class="content">
-                <?php the_excerpt(); ?>
+				<?php 
+				if( is_single()) {
+					the_content();
+				} else {
+					the_excerpt(); 
+				}
+				
+				?>
             </div>
 		</div>
-		<div class="level">
+		<div class="level card-footer">
 			<div class="card-footer-item level-left">
 				<?php  
 				$cats = array();
@@ -66,7 +73,7 @@
 				?>
 			</div>
 			<div class="card-footer-item level-right">
-				<?php echo '<span class="tag is-small is-primary">' . $post_categories . '</span>'; ?>
+				<?php echo '<span class="tag is-small is-white-ter is-rounded">' . $post_categories . '</span>'; ?>
 			</div>
 		</div>
     </div>

@@ -16,3 +16,17 @@
         }
     }
 }
+.post-navigation {
+    padding-top: 2rem;
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+
+        .nav-previous a:before {
+            content: "< ";
+        }
+        .nav-next a:after {
+            content: " >";
+        }
+    }
+}
