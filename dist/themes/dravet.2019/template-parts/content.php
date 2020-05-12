@@ -49,7 +49,7 @@
 				?>
 			</div><!-- .entry-content -->
 
-			<footer class="content entry-footer">
+			<footer class="card-footer-item content entry-footer">
 				<?php bulmastarter_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 		</div>

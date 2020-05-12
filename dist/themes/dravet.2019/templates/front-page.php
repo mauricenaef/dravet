@@ -200,7 +200,7 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
                         echo '<ul class="download-list is-size-6">';
                         foreach($custom_posts_berichte as $post) : setup_postdata($post);
                         $pdf_url = carbon_get_the_post_meta( 'attachments' );
-                        echo '<li><a href="' . wp_get_attachment_url($pdf_url[0]) . '" class="is-size-7">' . get_svg_icon('pdf-file') . ' ' . get_the_title() . '  (2.3 Mb)</a></li>';
+                        echo '<li><a href="' . wp_get_attachment_url($pdf_url[0]) . '" class="is-size-7">' . get_svg_icon('pdf-file') . ' ' . get_the_title() . '</a></li>';
                         endforeach;
                         echo '</ul>';
                         }
