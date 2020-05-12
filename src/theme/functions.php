@@ -52,6 +52,7 @@ function bulmastarter_setup() {
 	require get_template_directory() . '/functions/admin-settings.php';
 	require get_template_directory() . '/functions/admin-brands.php';
 	require get_template_directory() . '/functions/admin-faq.php';
+	require get_template_directory() . '/functions/admin-team.php';
 
 	require get_template_directory() . '/functions/admin-woocommerce.php';
 	require get_template_directory() . '/functions/admin-woocommerce-template.php';
