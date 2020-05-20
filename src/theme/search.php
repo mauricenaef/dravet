@@ -6,6 +6,10 @@
  *
  * @package dravet
  */
+
+global $wp_query;
+$count =  $wp_query->post_count;
+
 get_header(); ?>
 
 <div id="primary" class="content-area container">
@@ -17,6 +21,7 @@ get_header(); ?>
 					<h1 class="title is-2 page-title">
 						<?php printf( esc_html__( 'Suchergebnisse für %s', 'dravet' ), '<span class="">' . get_search_query() . '</span>' ); ?>
 					</h1>
+					<p><?php echo $count . ' ' .  __('Artikel / Seiten gefunden.', 'dravet') ?></p>
 				</header><!-- .page-header -->
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'template-parts/content', 'post' ); ?>

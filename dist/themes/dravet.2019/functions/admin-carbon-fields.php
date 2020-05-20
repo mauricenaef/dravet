@@ -192,10 +192,11 @@ function custom_carbon_fields_front_page() {
             <div class="card_quer">
             <?php foreach ($fields['crb_slider'] as $block): ?>
                 <div class="media">
+                    <?php if($block['photo']) { ?>
                     <div class="media-left">
                         <figure class="image is-96x96">
                             <?php if($block['url_link']['url'] ) { ?>
-                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>">
+                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" <?php echo ( $block['url_link']['blank'] ? ' target="_blank"' : '') ?>>
                             <?php echo wp_get_attachment_image( $block['photo'], 'teaser-square', false, array( 'class' => $image_class ) ); ?>
                             </a>
                             <?php } else { ?>
@@ -203,10 +204,11 @@ function custom_carbon_fields_front_page() {
                             <?php } ?>
                         </figure>
                     </div>
+                    <?php } ?>
                     <div class="media-content">
                         <div class="field">
                             <?php if($block['url_link']['url'] ) { ?>
-                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" class="title is-spaced is-5"><?php  echo esc_html( $block['title'] ); ?></a>
+                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>"  <?php echo ( $block['url_link']['blank'] ? ' target="_blank"' : '') ?> class="title is-spaced is-5"><?php  echo esc_html( $block['title'] ); ?></a>
                             <?php } else { ?>
                             <p class="title is-5"><?php  echo esc_html( $block['title'] ); ?></p>
                             <?php } ?>
@@ -242,10 +244,11 @@ function custom_carbon_fields_front_page() {
         <div class="card_wrap">
         <?php foreach ($fields['crb_slider'] as $block): ?>
             <div class="card has-boxshadow">
+                <?php if($block['photo']) { ?>
                 <div class="card-image">
-                    <figure class="image ">
+                    <figure class="image">
                         <?php if($block['url_link']['url'] ) { ?>
-                        <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>">
+                        <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" <?php echo ( $block['url_link']['blank'] ? ' target="_blank"' : '') ?>>
                             <?php echo wp_get_attachment_image( $block['photo'], 'card-header', false, array( 'class' => 'hero' ) ); ?>
                         </a>
                         <?php } else { ?>
@@ -253,10 +256,11 @@ function custom_carbon_fields_front_page() {
                         <?php } ?>
                     </figure>
                 </div>
+                <?php } ?>
                 <div class="card-content">
                     <div class="media-content">
                         <?php if($block['url_link']['url'] ) { ?>
-                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" class="title is-spaced is-6"><?php  echo esc_html( $block['title'] ); ?></a>
+                            <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" <?php echo ( $block['url_link']['blank'] ? ' target="_blank"' : '') ?> class="title is-spaced is-6"><?php  echo esc_html( $block['title'] ); ?></a>
                         <?php } else { ?>
                             <p class="title is-6"><?php  echo esc_html( $block['title'] ); ?></p>
                         <?php } ?>

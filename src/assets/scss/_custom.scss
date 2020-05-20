@@ -52,7 +52,7 @@
         //padding-bottom: 0;
         p, ul li {
             font-size: .8rem;
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
         }
     }
 }
@@ -151,9 +151,9 @@
     }
 }
 body:not(.home) .card {
-    .title {
+    a.title {
         margin-bottom: .75em;
-        color: $green !important;
+        color: $light-brown;
     }
     time {
         color: $primary;
@@ -240,6 +240,10 @@ body:not(.home) .card {
     }
 }
 
+.posts-navigation {
+    clear: both;
+}
+
 .is-small {
     font-size: .6rem !important;
 }
@@ -280,5 +284,13 @@ body:not(.home) .card {
 
 .spacer {
     margin: 2rem 0;
+}
+
+.advgb-recent-posts .advgb-recent-post {
+    padding: 0;
+}
+
+.advgb-post-wrapper>* {
+    margin: 0 !important;
 }
 

@@ -6,6 +6,9 @@
  *
  * @package dravet
  */
+
+$attachment = carbon_get_the_post_meta( 'attachments' );
+
 ?>
 <article id="post-<?php the_ID(); ?>" class="event-card">
     <div class="card has-boxshadow">
@@ -20,7 +23,11 @@
         </div>
         <div class="card-content">
             <div class="media-content">
-                <a href="<?php the_permalink(); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
+				<?php if( in_category('jahresberichte') || in_category('newsletter') && $attachment ) { ?>
+				<a href="<?php echo wp_get_attachment_url($attachment[0]); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
+				<?php } else { ?>
+				<a href="<?php the_permalink(); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
+				<?php } ?>
 				<?php 
 				
 				
@@ -37,6 +44,7 @@
 					
 				
 				} else {
+
 					echo '<p class="subtitle is-7"><time datetime="' . get_the_date('c') . '">' . __('Publiziert am', 'dravet') . ' ' . get_the_date(get_option('date_format')) . '</time></p>';
 				}
 				
@@ -48,7 +56,16 @@
 				if( is_single()) {
 					the_content();
 				} else {
-					the_excerpt(); 
+					if($attachment) {
+						$attachment_url = wp_get_attachment_url($attachment[0]);
+						if( in_category('jahresberichte') || in_category('newsletter') && $attachment_url ) {
+							echo '<a href="' . $attachment_url . '" class="button is-small is-link is-rounded">'. __('Download ', 'dravet') . get_svg_icon('pdf-file', 'is-small') .'</a>';
+						} else {
+							the_excerpt(); 
+						}
+					} else {
+						the_excerpt(); 
+					}
 				}
 				
 				?>

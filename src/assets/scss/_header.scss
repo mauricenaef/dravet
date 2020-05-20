@@ -32,9 +32,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 1rem;
-        padding-left: 1rem;
-        border-left: 1px solid;
         li {
             //border-right: 1px solid;
             &:last-of-type {
@@ -87,19 +84,18 @@
     .top-nav {
         padding-top: 1rem;
         text-align: right;
+        a.level-item:first-of-type {
+            border-right: 1px solid;
+        }
         a {
             color: $grey-dark;
             font-size: 90%;
+            padding: 0 1em;
+            margin: 0 !important;
             &:hover, &:focus {
                 color: $link;
             }
-            &.divider-right:after {
-                content: " |";
-                padding-left: .5em;
-            }
-            .icon {
-                margin-bottom: 3px;
-            }
+        
         }
     }
     .custom-logo-link {
@@ -119,6 +115,10 @@
         padding: .5rem;
         margin-right: 1em;
     }
+}
+
+.search .card-content .subtitle {
+    display: none;
 }
 
 

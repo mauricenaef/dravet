@@ -38,7 +38,6 @@
 						$languages = pll_the_languages( array( 'raw' => 1 ) );
 						$item = '';
 						if($languages) {
-							svg_icon('globe_2'); 
 							foreach($languages as $language) {
 								$class = in_array( 'current-lang', $language['classes']) ? ' current_lang' : '';
 								echo '<a href="' . $language['url'] . '" class="level-item languages'. $class .'">' . $language['slug'] . '</a>';

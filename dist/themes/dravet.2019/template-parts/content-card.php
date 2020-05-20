@@ -17,7 +17,7 @@
         </div>
         <div class="card-content">
             <div class="media-content">
-                <a href="<?php the_permalink(); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
+                <a href="<?php the_permalink(); ?>"   class="title is-6 is-spaced"><?php the_title(); ?></a>
 				<?php 
 				
 				

@@ -1,11 +1,5 @@
 (function($){
-
-	const test = 'Babel is doing the job';
-	const test2 = 22;
-
-	$(window).on('load', function () {
-		console.log(test);
-		// Store Full Page Height as a variable
+	$(window).on('load', function () {		// Store Full Page Height as a variable
 		document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
 	});
 

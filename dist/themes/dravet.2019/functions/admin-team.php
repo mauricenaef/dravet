@@ -14,7 +14,8 @@
 
     $args = array(
         'role'    => $role,
-        'orderby' => 'user_nicename',
+        'meta_key'   => 'menu_order',
+        'orderby' => 'meta_value_num',
         'order'   => 'ASC'
     );
 
