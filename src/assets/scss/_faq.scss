@@ -45,7 +45,7 @@
 .accordion-toggle { 
     cursor: pointer; 
     padding: .3em 2.5rem .3em .5rem;
-    font-size: rem-calc(14);
+    font-size: 15px !important; 
     position: relative;
     opacity: .8;
     &:hover, &:focus {

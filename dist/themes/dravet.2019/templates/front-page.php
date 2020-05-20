@@ -166,7 +166,7 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
                                     <div class="card-content">
                                         <h3 class="title is-size-6"><?php echo esc_html( $user->display_name ); ?></h3>
                                         <h4 class="subtitle is-size-7"><?php echo $funktion; ?></h4>
-                                        <p><a class="button is-rounded is-primary is-small"><?php _e('Profil Ansehen', 'dravet'); ?></a></p>
+                                        
                                     </div>
                                 </li>
                                 <?php } ?>
