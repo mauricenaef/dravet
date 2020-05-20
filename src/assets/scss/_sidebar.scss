@@ -11,4 +11,10 @@ aside {
     .current_page_item a {
         color: $black-ter !important;
     }
+    .members-login-form {
+        .login-remember {
+            margin-bottom: 1rem;
+        }
+        
+    }
 }

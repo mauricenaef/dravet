@@ -1477,8 +1477,8 @@ a.panel-block:hover,label.panel-block:hover{background-color:whitesmoke}
 .has-icons-left svg{margin-left:.3rem;padding-right:.5rem}
 .widget-area{padding-left:3rem;font-size:90%}
 .widget-area .widget-title{font-weight:700;margin-bottom:.5em;color:#242424}
-.widget-area ul{list-style-type:none;line-height:1.8}
-.widget-area ul li{color:#363636}
+.widget-area ul{list-style-type:none;line-height:1.8;color:#242424 !important}
+.widget-area ul li{color:#242424 !important}
 small{display:inline-block;line-height:1.4 !important;font-size:.6rem !important}
 hr{margin:.5rem 0}
 .round{border-radius:20000px}
@@ -1490,15 +1490,16 @@ hr{margin:.5rem 0}
 .content .is-5{font-size:1rem !important;opacity:.8}
 .content .is-6{font-size:.9rem !important;opacity:.8}
 .current_page_item a{color:#363636}
-.content p{color:#363636;line-height:1.8}
+.content p,.content ul,.content ol{color:#363636;line-height:1.8}
 .card,.card_quer{border-radius:3px;border:0}
 .card p,.card_quer p{line-height:1.7}
 .card a:not(.button),.card_quer a:not(.button){color:#5a8a38 !important}
-.card a:not(.button):hover,.card a:not(.button):focus,.card_quer a:not(.button):hover,.card_quer a:not(.button):focus{color:#eff0ef !important}
-.card .card-footer,.card_quer .card-footer{margin-top:-2.2rem;border:0}
+.card a:not(.button):hover,.card a:not(.button):focus,.card_quer a:not(.button):hover,.card_quer a:not(.button):focus{color:#002b7a !important}
+.card .card-footer,.card_quer .card-footer{margin-top:-2.2rem;border:0;padding-bottom:1rem}
 .card .card-footer-item.level-left,.card_quer .card-footer-item.level-left{border-right:0}
+.card .card-footer-item .tag,.card_quer .card-footer-item .tag{margin-top:.6rem}
 .card_quer{padding:.8rem 0}
-.card_wrap .card .card-content{padding-bottom:0}
+.event-card{margin-bottom:2rem}
 .card_wrap .card .card-content p,.card_wrap .card .card-content ul li{font-size:.8rem;margin-bottom:1em}
 .card :not(.card_quer) .image{border-bottom:1px solid whitesmoke}
 .media-content .button{margin-top:1rem}
@@ -1512,7 +1513,7 @@ hr{margin:.5rem 0}
 .quick-links a{color:white}
 .partner-section{border-top:1px solid #dbdbdb;padding:1rem}
 .partner-section .columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-negative:1;flex-shrink:1}
-.sponsor-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-flex:1 !important;-ms-flex:1 !important;flex:1 !important;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;padding:1rem}
+.sponsor-item{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;padding:1rem}
 .sponsor-item a{display:block}
 .sponsor-item img{-webkit-filter:grayscale(1);filter:grayscale(1)}
 .events-section .columns{margin-top:2rem;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -1554,6 +1555,8 @@ body:not(.home) .card .content p{font-size:.8rem}
 .wp-block-button__link.has-grey-background-color,.woocommerce a.button.has-grey-background-color{background-color:#7a7a7a}
 .wp-block-button__link:hover,.wp-block-button__link:focus,.woocommerce a.button:hover,.woocommerce a.button:focus{opacity:.7}
 .home .button.is-link{color:white !important}
+.button.is-primary:hover{background-color:#002b7a !important}
+.button.is-primary:active{background-color:#002b7a !important}
 .loading{width:3rem;margin:2rem auto}
 .site-header>.level{margin-bottom:1.8rem;padding:0 2rem}
 .site-header .icon{margin-right:.25em}
@@ -1579,6 +1582,7 @@ ul.mega-sub-menu{-webkit-box-shadow:0 8px 8px rgba(0,0,0,0.1) !important;box-sha
 .search-icon::before{color:#0a0a0a !important}
 .content-area aside section{max-width:15rem;margin-bottom:2rem}
 aside .current_page_item a{color:#242424 !important}
+aside .members-login-form .login-remember{margin-bottom:1rem}
 .site-content .wp-block-gallery{margin-left:0;margin-right:0}
 .site-content .blocks-gallery-grid{margin-left:0}
 .site-content p a[href$=".pdf"]::before{content:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tR2VuZXJhdGVkIGJ5IElKU1ZHIChodHRwczovL2dpdGh1Yi5jb20vaWNvbmphci9JSlNWRyktLT4KICAgIDxwYXRoIGQ9Ik0yMS45NjEsNi4zMDhsLTAuMTA4LC0wLjE2MmwtNS45OTksLTUuOTk5bC0wLjE2MiwtMC4xMDhsLTAuMTkyLC0wLjAzOWgtMTNjLTAuMjc2LDAgLTAuNSwwLjIyNCAtMC41LDAuNXYyM2MwLDAuMjc2IDAuMjI0LDAuNSAwLjUsMC41aDE5YzAuMjc2LDAgMC41LC0wLjIyNCAwLjUsLTAuNXYtMTdsLTAuMDM5LC0wLjE5MlptLTUuOTYxLC00LjYwMWw0LjI5Myw0LjI5M2gtNC4yOTN2LTQuMjkzWm0tMTMsMjEuMjkzdi0yMmgxMnY1LjVjMCwwLjI3NiAwLjIyNCwwLjUgMC41LDAuNWg1LjV2MTZoLTE4Wm0xNS41LC0xMGgtMi4yNTVjLTAuMjc2LDAgLTAuNSwwLjIyNCAtMC41LDAuNXY1LjE4OGMwLDAuMjc2IDAuMjI0LDAuNSAwLjUsMC41YzAuMjc2LDAgMC41LC0wLjIyNCAwLjUsLTAuNXYtMi4wOTRoMS4xNDFjMC4yNzYsMCAwLjUsLTAuMjI0IDAuNSwtMC41YzAsLTAuMjc2IC0wLjIyNCwtMC41IC0wLjUsLTAuNWgtMS4xNDF2LTEuNTk0aDEuNzU1YzAuMjc2LDAgMC41LC0wLjIyNCAwLjUsLTAuNWMwLC0wLjI3NiAtMC4yMjQsLTAuNSAtMC41LC0wLjVabS02LjQ3LDBoLTAuOTM4Yy0wLjI3NiwwIC0wLjUsMC4yMjQgLTAuNSwwLjV2NS4xODhjMCwwLjI3NiAwLjIyNCwwLjUgMC41LDAuNWgwLjkzOGMxLjM1NywwIDIuMjY5LC0xLjI0MyAyLjI2OSwtMy4wOTRjMC4wMDEsLTEuODUxIC0wLjkxMSwtMy4wOTQgLTIuMjY5LC0zLjA5NFptMCw1LjE4OGgtMC40Mzh2LTQuMTg4aDAuNDM4YzAuOTM3LDAgMS4yNjksMS4xMjggMS4yNjksMi4wOTRjMC4wMDEsMC45NjYgLTAuMzMyLDIuMDk0IC0xLjI2OSwyLjA5NFptLTQuNTA5LC01LjE4OGgtMS4yNDFjLTAuMjc2LDAgLTAuNSwwLjIyNCAtMC41LDAuNXY1LjE4OGMwLDAuMjc2IDAuMjI0LDAuNSAwLjUsMC41YzAuMjc2LDAgMC41LC0wLjIyNCAwLjUsLTAuNXYtMi4wOTRoMC43NGMxLjE1NSwwIDEuNzQsLTAuNjA0IDEuNzQsLTEuNzk3YzAsLTEuMTkzIC0wLjU4NSwtMS43OTcgLTEuNzM5LC0xLjc5N1ptMCwyLjU5NGgtMC43NDF2LTEuNTk0aDAuNzRjMC42MzgsMCAwLjc0LDAuMTg5IDAuNzQsMC43OTdjMCwwLjYwOCAtMC4xMDEsMC43OTcgLTAuNzM5LDAuNzk3WiIgY29sb3I9ImN1cnJlbnRDb2xvciI+PC9wYXRoPgo8L3N2Zz4=");width:16px;height:16px;display:inline-block;margin-right:.5em}
@@ -1599,7 +1603,7 @@ aside .current_page_item a{color:#242424 !important}
 .ginput_container input,.ginput_container textarea{margin:0;border:1px solid #383767;padding:.25em .75em !important;margin:0 -0.35em !important}
 .ginput_container input:focus,.ginput_container textarea:focus{outline:none !important;border-color:#5a8a38 !important}
 .archives{margin-top:2rem}
-.archives .card a.title{margin-bottom:0}
+.archives .card a.title{margin-bottom:.2rem;display:block}
 .archives .card a.button{color:white !important}
 .card-container{position:relative;min-height:10rem;margin-top:3rem;clear:both}
 .card-content{visibility:visible;opacity:1;clear:both}
@@ -1624,6 +1628,7 @@ aside .current_page_item a{color:#242424 !important}
 .woocommerce ul.products li.product .woocommerce-loop-product__title{font-weight:bold;padding-bottom:0;font-size:80%}
 .woocommerce ul.products li.product .price{color:#383767;font-weight:bolder}
 .woocommerce ul.products li.product .button{margin-top:0}
+.wc-block-grid__products{list-style-type:none !important;margin-left:0 !important}
 .single-product .cart{margin-top:1rem}
 .single-product .cart input[type=number]{line-height:2.8}
 .single-product .reset_variations{display:block}
@@ -1930,6 +1935,7 @@ a.navbar-item.is-active,.navbar-link.is-active{color:#0a0a0a}
 a.navbar-item.is-active:not(:focus):not(:hover),.navbar-link.is-active:not(:focus):not(:hover){background-color:transparent}
 .navbar-item.has-dropdown:focus .navbar-link,.navbar-item.has-dropdown:hover .navbar-link,.navbar-item.has-dropdown.is-active .navbar-link{background-color:#fafafa}
 .partner-section .columns{-ms-flex-wrap:nowrap;flex-wrap:nowrap}
+.sponsor-item{-webkit-box-flex:1 !important;-ms-flex:1 !important;flex:1 !important}
 .site{padding-top:2rem}
 .site-footer{font-size:14px}
 .site-footer a{font-size:14px}
@@ -2052,6 +2058,7 @@ a.navbar-item.is-active:not(:focus):not(:hover),.navbar-link.is-active:not(:focu
 .hero.is-large .hero-body{padding-bottom:18rem;padding-top:18rem}
 .hero-buttons{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .hero-buttons .button:not(:last-child){margin-right:1.5rem}
+.event-card{max-width:31%;float:left;margin-right:2%}
 }@media screen and (min-width:1024px){.is-size-1-desktop{font-size:2.5rem !important}
 .is-size-2-desktop{font-size:1.6rem !important}
 .is-size-3-desktop{font-size:1.4rem !important}

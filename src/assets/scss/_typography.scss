@@ -9,8 +9,9 @@
     ul {
         list-style-type: none;
         line-height: 1.8;
+        color: $black-ter !important;
         li {
-            color: $grey-darker;
+            color: $black-ter !important;
             //&:first-of-type {
                // font-weight: bold;
             //}
@@ -67,7 +68,7 @@ hr {
     color: $grey-darker;
 }
 
-.content p {
+.content p, .content ul, .content ol {
     color: $grey-darker;
     line-height: 1.8;
 }

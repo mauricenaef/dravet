@@ -8,21 +8,34 @@
     a:not(.button) {
         color: $green !important;
         &:hover, &:focus {
-            color: $grey-light !important;
+            color: $dark-blue !important;
         }
     }
     .card-footer {
         margin-top: -2.2rem;
         border: none;
+        padding-bottom: 1rem;
     }
     .card-footer-item {
         &.level-left {
             border-right: 0;
         }
+        .tag {
+            margin-top: 0.6rem;
+        }
     }
 }
 .card_quer {
     padding: .8rem 0;
+}
+
+.event-card {
+    margin-bottom: 2rem;
+    @include tablet {
+        max-width: 31%;
+        float: left;
+        margin-right: 2%
+    }
 }
 
 @include mobile {
@@ -36,7 +49,7 @@
 
 .card_wrap .card {
     .card-content {
-        padding-bottom: 0;
+        //padding-bottom: 0;
         p, ul li {
             font-size: .8rem;
             margin-bottom: 1em;
@@ -112,7 +125,10 @@
 
 .sponsor-item {
     display: flex;
-    flex: 1 !important;
+    @include from($tablet) {
+
+        flex: 1 !important;
+    }
     align-items: center;
     justify-content: flex-start;
     padding: 1rem;
@@ -149,6 +165,7 @@ body:not(.home) .card {
         p {
             font-size: .8rem;
         }
+        
     }
 }
 .button {
@@ -264,3 +281,4 @@ body:not(.home) .card {
 .spacer {
     margin: 2rem 0;
 }
+

@@ -30,6 +30,11 @@
     }
 }
 
+.wc-block-grid__products {
+    list-style-type: none !important;
+    margin-left: 0 !important;
+}
+
 .single-product {
     .cart {
         margin-top: 1rem;

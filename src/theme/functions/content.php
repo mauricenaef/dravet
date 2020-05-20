@@ -57,7 +57,7 @@ add_filter('excerpt_more', 'new_excerpt_more', 21 );
 
 function the_excerpt_more_link( $excerpt ){
     $post = get_post();
-    $excerpt .= '<a href="'. get_permalink($post->ID) . '" class="button is-small is-link is-rounded">' . __('weiter lesen', 'dravet') . ' ' . get_svg_icon('chev-right', 'is-small') . '</a>';
+    $excerpt .= '<a href="'. get_permalink($post->ID) . '" class="button is-small is-link is-rounded">' . __('weiterlesen', 'dravet') . ' ' . get_svg_icon('chev-right', 'is-small') . '</a>';
     return $excerpt;
 }
 add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );

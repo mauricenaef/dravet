@@ -44,3 +44,13 @@
         color: $white !important;
     }
 }
+
+ // Button
+ .button.is-primary {
+    &:hover {
+        background-color: $dark-blue !important;
+    }
+    &:active {
+        background-color: $dark-blue !important;
+    }
+}

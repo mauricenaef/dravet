@@ -58,22 +58,24 @@
 			<div class="card-footer-item level-left">
 				<?php  
 				$cats = array();
-				foreach (get_the_category(get_the_ID()) as $c) {
-				$cat = get_category($c);
-				array_push($cats, $cat->name);
-				}
-				
-				if (sizeOf($cats) > 0) {
-				$post_categories = implode(', ', $cats);
-				} else {
-				$post_categories = 'Not Assigned';
-				}
+
+					foreach (get_the_category(get_the_ID()) as $c) {
+					$cat = get_category($c);
+					array_push($cats, $cat->name);
+					}
+					
+					if (sizeOf($cats) > 0) {
+					$post_categories = implode(', ', $cats);
+					} else {
+					$post_categories = '';
+					}
+			
 				
 				
 				?>
 			</div>
 			<div class="card-footer-item level-right">
-				<?php echo '<span class="tag is-small is-white-ter is-rounded">' . $post_categories . '</span>'; ?>
+				<?php echo ($post_categories != '') ? '<span class="tag is-small is-white-ter is-rounded">' . $post_categories . '</span>' : '<span>&nbsp;</span>'; ?>
 			</div>
 		</div>
     </div>

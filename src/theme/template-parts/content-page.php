@@ -16,6 +16,15 @@
 
 		<div class="content entry-content">
 			<?php the_content();?>
+
+			<?php
+			$pdf_attachment = get_post_meta( get_the_ID(), '_attachments', true);
+			
+			if($pdf_attachment) {
+				echo 'download';
+				print_r($pdf_attachment);
+			}
+			?>
 			
 			<?php wp_link_pages( array(
 				'before' => '<div class="page-links level">' . esc_html__( 'Pages:', 'dravet' ),

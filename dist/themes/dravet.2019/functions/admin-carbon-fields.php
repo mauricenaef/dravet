@@ -25,7 +25,7 @@ function custom_carbon_fields_front_page() {
     ->where( 'post_id', '=', get_option( 'page_on_front' ) )
     ->add_fields( array( 
         Field::make( 'text', 'spenden_titel', 'Spenden Titel' ),
-        Field::make( 'rich_text', 'spenden_content', 'Spenden Inhalt' ),
+        Field::make( 'textarea', 'spenden_content', 'Spenden Inhalt' ),
         Field::make( 'textarea', 'spenden_info', 'Spenden Info' ),
     ) );
 

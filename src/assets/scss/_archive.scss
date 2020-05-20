@@ -4,7 +4,8 @@
         a {
             //display: block;
             &.title {
-                margin-bottom: 0;
+                margin-bottom: .2rem;
+                display: block;
             }
             &.button {
                 color: $white !important;

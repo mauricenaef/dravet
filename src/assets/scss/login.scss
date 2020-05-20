@@ -27,13 +27,13 @@
   
       }
   
-      // Button
-      .button-primary {
-          &:hover {
-  
-          }
-          &:active {
-  
-          }
-      }
-  }
+    }
+    // Button
+    .button-primary {
+        &:hover {
+            background-color: $secondary-color;
+        }
+        &:active {
+            background-color: $secondary-color;
+        }
+    }
