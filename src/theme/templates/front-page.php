@@ -27,13 +27,27 @@ get_header(); ?>
 		</main><!-- #main -->
 		<aside id="secondary" class="is-4 is-offset-1 column" role="complementary">
             <div class="card has-radius-large has-text-centered has-boxshadow">
-                <div class="card-image">
+
+                <?php
+                $cta_images = carbon_get_the_post_meta( 'spenden_bilder' );
+                if($cta_images) {
+                    ?>
+                    <div class="card-image">
                     <figure class="three-stack">
-                        <?php echo wp_get_attachment_image( 233, array('80', '80'), false, array( 'class' => 'round' ) ); ?>
-                        <?php echo wp_get_attachment_image( 248, array('80', '80'), false, array( 'class' => 'round' ) ); ?>
-                        <?php echo wp_get_attachment_image( 202, array('80', '80'), false, array( 'class' => 'round' ) ); ?>
+                    <?php
+                    $i = 0;
+                    foreach ($cta_images as $image) {
+                        echo wp_get_attachment_image( $image, array('80', '80'), false, array( 'class' => 'round' ) );
+                        $i++;
+                        if( $i == 3) break;
+                        
+                    }
+                    ?>
                     </figure>
-                </div>
+                    </div>
+                    <?php
+                }
+                ?>
                 <div class="card-content ">
                     <div class="content">
                         <?php 
@@ -82,7 +96,7 @@ $custom_cat =  $news_category[0]['id'];
 $term_data = get_term_by( 'id', absint( $custom_cat ), 'category' );
 $term_name = $term_data->name;
 $archive_url = carbon_get_the_post_meta('news_link');
-$news_gallery = carbon_get_the_post_meta('news_gallery');
+//$news_gallery = carbon_get_the_post_meta('news_gallery');
 
 //print_r($news_gallery);
 
@@ -92,9 +106,10 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
         <h1 class="title is-size-7"><?php _e('Aktuell', 'dravet'); ?> &middot; <?php echo $term_name; ?></h1>
         <div class="columns is-multiline">
 
-            <div class="column is-7">
+            <div class="column is-6">
                 <div class="box is-borderless is-paddingless">
                     <?php
+                    $post_list = new WP_Query();
                     $post_list = get_posts( array(
                         'category' => $custom_cat,
                         'posts_per_page' => 1
@@ -110,19 +125,32 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
 
                 </div>
             </div>
-            <div class="column is-offset-1">
-                <a href="<?php echo $archive_url['url']; ?>" class="button is-primary is-small is-rounded"><?php _e('Alle', 'dravet'); ?> <?php echo $archive_url['anchor'] ?> <?php svg_icon('chev-right', 'is-small') ?></a>
-                <?php
-                if($news_gallery) {
-                    echo '<div class="gallery">';
-                    foreach ($news_gallery as $item) {
-                        echo wp_get_attachment_image( $item, array('60', '60'), false, array( 'class' => 'hero' ) );
-                    }
-                    echo '</div>';
+            <div class="column is-6">
+            <?php
+            $post_list_2 = new WP_Query();
+            $post_list_2 = get_posts( array(
+                'category' => $custom_cat,
+                'posts_per_page' => 1,
+                'offset' => 1
+            ) );
+            if( $post_list_2 ) {
+                foreach ($post_list_2 as $post) {
+                    get_template_part('template-parts/news', 'preview');
                 }
-                ?> 
-            </div>
+                wp_reset_postdata();
+            }
 
+            /* if($news_gallery) {
+                echo '<div class="gallery">';
+                foreach ($news_gallery as $item) {
+                    echo wp_get_attachment_image( $item, array('60', '60'), false, array( 'class' => 'hero' ) );
+                }
+                echo '</div>';
+            } */
+
+            ?> 
+            </div>
+            <a href="<?php echo $archive_url['url']; ?>" class="button is-right is-primary is-small is-rounded"><?php _e('Alle', 'dravet'); ?> <?php echo $archive_url['anchor'] ?> <?php svg_icon('chev-right', 'is-small') ?></a>
         </div>
     </div>
 </section>
@@ -143,7 +171,8 @@ $news_gallery = carbon_get_the_post_meta('news_gallery');
                 <?php 
                     $args_users = array(
                         'role'    => 'Vorstand',
-                        'orderby' => 'user_nicename',
+                        'meta_key'   => 'menu_order',
+                        'orderby' => 'meta_value_num',
                         'order'   => 'ASC'
                     );
                     $users = get_users( $args_users );
