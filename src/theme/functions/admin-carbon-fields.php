@@ -164,6 +164,7 @@ function custom_carbon_fields_front_page() {
     ->add_fields( array(
         Field::make( 'complex', 'crb_slider', __( 'Card Element' ) )
         ->setup_labels( $card_labels )
+        ->set_collapsed(true)
         ->add_fields( array(
             Field::make( 'text', 'title', __( 'Element Titel' ) ),
             Field::make( 'text', 'subtitle', __( 'Element Subtitel Titel (optional)' ) ),

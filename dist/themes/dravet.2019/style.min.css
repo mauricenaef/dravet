@@ -1489,6 +1489,11 @@ hr{margin:.5rem 0}
 .content .is-4{font-size:1.1rem !important;opacity:.8}
 .content .is-5{font-size:1rem !important;opacity:.8}
 .content .is-6{font-size:.9rem !important;opacity:.8}
+.content .has-purple-color{color:#433d72}
+.content .has-green-color{color:#90c66c}
+.content .has-grey-color{color:#838383}
+.content .has-white-color{color:#fff}
+.content .has-black-color{color:#000}
 .current_page_item a{color:#363636}
 .content p,.content ul,.content ol{color:#363636;line-height:1.8}
 .card,.card_quer{border-radius:3px;border:0}
