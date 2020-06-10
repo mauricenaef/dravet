@@ -1,10 +1,10 @@
-.wp-block-button__link, .woocommerce a.button {
+.wp-block-button__link, .woocommerce a.button, .wp-block-woocommerce-cart .wc-block-components-button, button[type="button"].wc-block-components-checkout-place-order-button {
     font-size: 75%;
     font-weight: 600;
-    background-color: white;
-    border-color: #dbdbdb;
+    background-color: $primary !important;
+    border-color: transparent;
     border-width: 1px;
-    color: #363636;
+    color: $white !important;
     cursor: pointer;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -27,6 +27,7 @@
     }
     &.has-purple-background-color {
         background-color: $primary;
+        color: $white !important;
     }
     &.has-green-background-color, &.add_to_cart_button, &.product_type_variable {
         background-color: $green;

@@ -1,0 +1,6 @@
+#backtoblog{display:none}
+#nav{text-align:center}
+.login{background:url("./images/login_bg.jpg");background-size:cover;background-position:center center}
+.login h1 a{background:url("./images/logo.svg") no-repeat 50% 50%;background-size:240px;width:300px}
+.button-primary:hover{background-color:#5a8a38}
+.button-primary:active{background-color:#5a8a38}

@@ -76,6 +76,7 @@ $( document ).ready(function() {
 	  const diff = stopPoint + stickOffset;
   
 	  $(window).scroll(function(){ // scroll event
+		
 		const windowTop = $(window).scrollTop(); // returns number
   
 		if (stopPoint < windowTop) {

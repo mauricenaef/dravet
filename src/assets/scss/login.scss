@@ -1,3 +1,5 @@
+$green: hsl(95, 42%, 38%);
+
 #backtoblog {
     display: none;
   }
@@ -31,9 +33,9 @@
     // Button
     .button-primary {
         &:hover {
-            background-color: $secondary-color;
+            background-color: $green;
         }
         &:active {
-            background-color: $secondary-color;
+            background-color: $green;
         }
     }

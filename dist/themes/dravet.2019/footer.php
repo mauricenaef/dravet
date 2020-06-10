@@ -77,8 +77,10 @@
 					) );
 				?>
 				<br />
-				<p>Vereinigung Dravet Syndrom Schweiz<br />8000 Zürich<br /><a href="mailto:info@dravet.ch">info@dravet.ch</a></p>
-				<br /><p>Spendenkonto:<br />85-599491-3<br />IBAN CH36 0900 0000 8559 9491 3</p>
+				<?php
+					$lang = pll_current_language();
+					echo wpautop( carbon_get_theme_option('footer_content_' . $lang ) ); 
+				?>
 			</div>
 		</div>
 		<div class="columns credits-container">
@@ -89,23 +91,8 @@
 				<img src="<?php echo $logo_url; ?>">
 			</div>
 			<div class="column  is-marginless-mobile">
-				<p class="is-small has-text-centered-mobile">© 2019 Dravet, alle Rechte vorbehalten, Angaben ohne gewähr</p>
+				<p class="is-small has-text-centered-mobile"><?php echo carbon_get_theme_option('footer_content_credits_' . $lang) ?></p>
 			</div>
-			<!-- <div class="columns is-10-mobile is-2-tablet is-centered" >
-				<div class="column search-item level-item is-12-mobile is-marginless">
-					<form >
-						<div class="field">
-							<p class="control has-icons-right">
-								<input type="search" placeholder="Suchbegriff eingeben" class="input is-rounded is-small">
-								<?php //svg_icon('search', 'icon is-small is-right'); ?>
-							</p>
-						</div>
-					
-					
-					</form>
-				</div>
-			</div>
-		</div> -->
 	</div>	
 </footer>
 </div><!-- #page -->

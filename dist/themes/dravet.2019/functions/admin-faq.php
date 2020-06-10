@@ -186,7 +186,7 @@ function dravet_faq( $datahash = null ) {
 									<img src="<?php bloginfo( 'template_url' ) ?>/images/loading.svg" class="loading">
 									<p class="element-padding text-center"><small><?php _e('FAQ werden geladen ...', 'dravet'); ?></small></p>
 								</div>
-								<div id="card-content"></div>
+								<div id="card-content" class="card-content"></div>
 							</div>
 
                         </div>
@@ -199,3 +199,78 @@ function dravet_faq( $datahash = null ) {
     <?php
     }
 }
+
+
+// Add Shortcode
+function faq_custom_shortcode( $atts ) {
+	global $post;
+	// Parse your shortcode settings with it's defaults
+	$atts = shortcode_atts( array(
+		'term'           => ''
+	), $atts, 'fragen' );
+
+	// Extract shortcode atributes
+	extract( $atts );
+
+	// Define output var
+	$output = '';
+
+	// Define query
+	$query_args = array(
+		'post_type' 	=> array( 'faq' ),
+		'posts_per_page'	=> -1,
+		'order'			=> 'ASC',
+		'orderby'		=> 'menu_order'
+	);
+
+	// Query by term if defined
+	if ( $term ) {
+
+		$query_args['tax_query'] = array(
+			array(
+				'taxonomy' => 'faq_kategorie',
+				'field'    => 'slug',
+				'terms'    => $term,
+				'include_children' => true,
+        		'operator' => 'IN'
+			),
+		);
+	}
+
+	// Query posts
+	$custom_query = new WP_Query( $query_args );
+
+	// Add content if we found posts via our query
+	if ( $custom_query->have_posts() ) {
+
+		// Open div wrapper around loop
+		$output .= '<div class="card-content">';
+
+		// Loop through posts
+		while ( $custom_query->have_posts() ) {
+
+			// Sets up post data so you can use functions like get_the_title(), get_permalink(), etc
+			$custom_query->the_post();
+
+			// This is the output for your entry so what you want to do for each post.
+			$output .= '<h6 class="accordion-toggle has-text-secondary">' . get_the_title() . '</h6>';
+			$output .= '<div class="accordion-content">';
+			$output .= get_the_content();
+			$output .= '</div>';
+
+		}
+
+		// Close div wrapper around loop
+		$output .= '</div>';
+
+		// Restore data
+		wp_reset_postdata();
+
+	}
+
+	// Return your shortcode output
+	return $output;
+
+
+}
+add_shortcode( 'fragen', 'faq_custom_shortcode' );

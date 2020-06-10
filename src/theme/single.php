@@ -15,26 +15,22 @@ $featured_image_alt = get_post_meta($featured_image, '_wp_attachment_image_alt',
 
 
 get_header(); ?>
-<?php if( !empty($featured_image) ): ?>
+<?php if( !empty($featured_image) && ( ! has_category(array('jahresberichte', 'newsletter', 'rapports-annuels', 'newsletter-fr'))) ): ?>
 		<figure <?php post_class('featured-image');?>>
 			<img <?php dravet_responsive_image($featured_image, $featured_image_size,'1260px'); ?><?php echo 'alt="' . $featured_image_alt . '"';?> />
 		</figure>
 <?php endif; ?>
 <div id="primary" class="content-area container">
 	<div class="columns">
-		<main id="main" class="site-main is-8 column" role="main">
+		<main id="main" class="site-main is-8 column card-wrap" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 				<?php
+				get_template_part( 'template-parts/content', 'post' );
+				//get_template_part( 'template-parts/content', 'page' ); 
 				
-				get_template_part( 'template-parts/content', 'page' ); 
-				
-				?>
-				<div class="container is-narrow">
-					<?php dravet_the_post_navigation();?>
-				</div>
-				<?php endwhile; ?>
-			</main><!-- #main -->
-			<?php get_sidebar(); ?>
+		endwhile; ?>
+		</main><!-- #main -->
+		<?php get_sidebar(); ?>
 	</div>
 </div><!-- #primary -->
 <?php get_footer(); ?>

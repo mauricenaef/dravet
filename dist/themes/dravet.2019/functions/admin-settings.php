@@ -10,23 +10,20 @@ function custom_carbon_fields_settings() {
 
     $basic_options_container = Container::make( 'theme_options', 'Basic Options' )
         ->set_icon( 'dashicons-carrot' )
-        ->set_page_menu_title( 'Front Page' )
+        ->set_page_menu_title( 'Seiten Settings' )
         ->set_page_menu_position( 80 )
         ->add_fields( array(
-            Field::make( 'separator', 'settings_0', 'Home Settings' ),
-            Field::make( 'complex', 'home_intro', 'Complex field' )
+            Field::make( 'separator', 'settings_0', 'Fusszeilen Inhalte' ),
+            /* Field::make( 'complex', 'home_intro', 'Complex field' )
                 ->add_fields( array(
                     Field::make( 'text', 'name', 'Name' ),
                     Field::make( 'image', 'avatar', 'Bild' ),
                     Field::make( 'text', 'telefon', 'Telefon' ),
-                ) ),
+            )), */
+            Field::make( 'rich_text', 'footer_content_de', 'Inhalt Rich DE' ), 
+            Field::make( 'rich_text', 'footer_content_fr', 'Inhalt Rich FR' ), 
+            Field::make( 'text', 'footer_content_credits_de', 'Inhalt Credits DE' ), 
+            Field::make( 'text', 'footer_content_credits_fr', 'Inhalt Credits FR' ),
             
-        ) );
-
-    // Add second options page under 'Basic Options'
-/*     Container::make( 'theme_options', 'Navigation' )
-        ->set_page_parent( $basic_options_container ) // reference to a top level container
-        ->add_fields( array(
-            
-        ) ); */
+        ));
 }

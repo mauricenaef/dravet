@@ -69,3 +69,31 @@ function bulmastarter_unregister_widgets() {
 	add_action('widgets_init', 'bulmastarter_unregister_widgets');
 
 	
+
+/**
+ * Filter Recent Widgets to link to PDF direct
+ */
+
+/* add_filter( 'widget_posts_args', function( array $args )
+{
+    add_filter( 'the_title', 'wpse_prepend_thumbnail', 10, 2 );
+    add_action( 'loop_end',  'wpse_clean_up' );
+    return $args;
+} );
+
+function wpse_prepend_thumbnail( $title, $post_id )
+{
+    static $instance = 0;
+
+    // Append thumbnail every second time (odd)
+    if( 1 === $instance++ % 2 && has_post_thumbnail( $post_id ) )
+        $title = get_the_post_thumbnail( $post_id ) . $title;
+
+    return $title;
+} 
+
+function wpse_clean_up( \WP_Query $q )
+{
+    remove_filter( current_filter(), __FUNCTION__ );
+    remove_filter( 'the_title', 'wpse_add_thumnail', 10 );
+}  */

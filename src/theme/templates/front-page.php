@@ -84,8 +84,8 @@ get_header(); ?>
 			?>
         </div>
         <div data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--right" data-glide-dir="<"><?php svg_icon('chev-right'); ?></button>
-            <button class="glide__arrow glide__arrow--left" data-glide-dir=">"><?php svg_icon('chev-left'); ?></button>
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><?php svg_icon('chev-left'); ?></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><?php svg_icon('chev-right'); ?></button>
         </div>
     </div>
 </nav>
@@ -103,10 +103,10 @@ $archive_url = carbon_get_the_post_meta('news_link');
 ?>
 <section class="section news-section">
     <div class="container">
-        <h1 class="title is-size-7"><?php _e('Aktuell', 'dravet'); ?> &middot; <?php echo $term_name; ?></h1>
+        <h1 class="title is-size-7 align-middle"><?php _e('Aktuell', 'dravet'); ?> &middot; <?php echo $term_name; ?> <a href="<?php echo $archive_url['url']; ?>" class="button is-right is-light is-small is-rounded"><?php _e('Alle', 'dravet'); ?> <?php echo $archive_url['anchor'] ?> <?php svg_icon('chev-right', 'is-small') ?></a></h1>
         <div class="columns is-multiline">
 
-            <div class="column is-6">
+            <div class="column is-6 is-border has-border-right">
                 <div class="box is-borderless is-paddingless">
                     <?php
                     $post_list = new WP_Query();
@@ -150,7 +150,7 @@ $archive_url = carbon_get_the_post_meta('news_link');
 
             ?> 
             </div>
-            <a href="<?php echo $archive_url['url']; ?>" class="button is-right is-primary is-small is-rounded"><?php _e('Alle', 'dravet'); ?> <?php echo $archive_url['anchor'] ?> <?php svg_icon('chev-right', 'is-small') ?></a>
+            
         </div>
     </div>
 </section>

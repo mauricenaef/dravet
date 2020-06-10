@@ -3,7 +3,7 @@
 ( function( $ ) {
 	$(document).ready(function () {
 
-        $('#card-content').find('.accordion-toggle').on( "click", function(){
+        $('.card-content').find('.accordion-toggle').on( "click", function(){
             $(this).next().slideToggle('fast').prev().toggleClass('open');      
             //Hide the other panels
             $(".accordion-content").not($(this).next()).slideUp('fast').prev().removeClass('open');
@@ -41,7 +41,7 @@
     // When Ajax ready
     $(document).ajaxComplete(function(){
         // Accordion
-        $('#card-content').find('.accordion-toggle').on( "click", function(){
+        $('.card-content').find('.accordion-toggle').on( "click", function(){
             $(this).next().slideToggle('fast').prev().toggleClass('open');      
             //Hide the other panels
             $(".accordion-content").not($(this).next()).slideUp('fast').prev().removeClass('open');

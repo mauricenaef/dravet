@@ -22,7 +22,7 @@ function custom_carbon_fields_front_page() {
     * Front Page
     */
     Container::make( 'post_meta', 'Front Call to Action' )
-    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->where( 'post_template', '=', 'templates/front-page.php' )
     ->add_fields( array( 
         Field::make( 'media_gallery', 'spenden_bilder', 'Spenden Bilder' )
         ->set_type( array( 'image' ) )
@@ -33,7 +33,7 @@ function custom_carbon_fields_front_page() {
     ) );
 
     Container::make( 'post_meta', 'Front News Sektion' )
-    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->where( 'post_template', '=', 'templates/front-page.php' )
     ->add_fields( array( 
         Field::make( 'association', 'news_category', 'Kategorie Links' )
         ->set_types( array(
@@ -51,7 +51,7 @@ function custom_carbon_fields_front_page() {
     ) );
 
     Container::make( 'post_meta', 'Front Mixed Content' )
-    ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+    ->where( 'post_template', '=', 'templates/front-page.php' )
     ->add_fields( array( 
         Field::make( 'rich_text', 'mixed_content', 'Inhalt Container' ),
         Field::make( 'urlpicker', 'mixed_downloads', 'Link Downloads' ),

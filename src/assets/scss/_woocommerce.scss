@@ -119,3 +119,10 @@ body .woocommerce-page form .form-row-last { width: 49%; }
     .woocommerce-checkout #order_review_heading,
     .woocommerce-checkout #order_review { width: 100%; float: none; }
 }
+
+.woocommerce-MyAccount-navigation {
+    ul {
+        list-style-type: none;
+        margin-left: 0;
+    }
+}

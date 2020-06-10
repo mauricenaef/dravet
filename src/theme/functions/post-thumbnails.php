@@ -41,7 +41,7 @@ if ( function_exists( 'add_theme_support' ) ) {
     add_image_size( 'ten-eighty', 1080);
     add_image_size( 'twelve-sixty', 1260);
     add_image_size( 'fourteen-hundred', 1400);
-    add_image_size( 'hero', 1400, 350, true);
+    add_image_size( 'hero', 1400, 550, true);
     add_image_size( 'eighteen-eighty', 1880);
 
 

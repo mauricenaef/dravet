@@ -1,4 +1,4 @@
-.ginput_container {
+.ginput_container, .woocommerce-form {
     &.ginput_container_radio li, &.ginput_container_checkbox li  {
         overflow: visible !important;
         margin-left: .5em !important;
@@ -29,6 +29,64 @@
         &:focus {
             outline: none !important;
             border-color: $green !important;
+        }
+    }
+    .gf_login_links {
+        margin-bottom: 1rem;
+        a:first-of-type {
+            display: none;
+        }
+    }
+    .gform_button {
+        border-radius: 100px;
+    }
+}
+
+.searchform {
+    .control {
+        max-width: 400px;
+    }
+    label {
+
+    }
+    .input-wrap {
+        display: flex;
+    }
+    .input {
+        border-radius: 100px 0 0 100px;
+        padding-left: 1.4em;
+    }
+    .button {
+        border-radius: 0 100px 100px 0;
+    }
+}
+
+.post-edit-link {
+    font-size: .6rem;
+    font-weight: lighter;
+    padding: .5em .75em;
+    border: 1px solid $green;
+    border-radius: 100px;
+}
+
+.woocommerce-MyAccount-content {
+    .edit {
+        font-size: .6rem;
+        font-weight: lighter;
+        padding: .5em .75em;
+        border: 1px solid $green;
+        border-radius: 100px;
+    }
+    .woocommerce-Address-title {
+        &::before, &::after {
+            display: none !important;
+            content: '' !important;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            margin-bottom: 0;
         }
     }
 }

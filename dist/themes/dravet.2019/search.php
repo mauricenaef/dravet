@@ -23,10 +23,11 @@ get_header(); ?>
 					</h1>
 					<p><?php echo $count . ' ' .  __('Artikel / Seiten gefunden.', 'dravet') ?></p>
 				</header><!-- .page-header -->
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'template-parts/content', 'post' ); ?>
-				<?php endwhile; ?>
-				<?php the_posts_navigation(); ?>
+				<div class="card_wrap">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'template-parts/content', 'post' ); ?>
+					<?php endwhile; ?>
+				</div>
 			</div>
 		<?php else: ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>

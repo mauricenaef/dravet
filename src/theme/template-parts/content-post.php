@@ -23,8 +23,8 @@ $attachment = carbon_get_the_post_meta( 'attachments' );
         </div>
         <div class="card-content">
             <div class="media-content">
-				<?php if( in_category('jahresberichte') || in_category('newsletter') && $attachment ) { ?>
-				<a href="<?php echo wp_get_attachment_url($attachment[0]); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
+				<?php if( has_category(array('jahresberichte', 'newsletter', 'rapports-annuels', 'newsletter-fr')) && $attachment ) { ?>
+				<a href="<?php echo wp_get_attachment_url($attachment[0]); ?>" class="title is-6 is-spaced"><?php the_title(); ?> <?php svg_icon('pdf-file') ?></a>
 				<?php } else { ?>
 				<a href="<?php the_permalink(); ?>" class="title is-6 is-spaced"><?php the_title(); ?></a>
 				<?php } ?>
