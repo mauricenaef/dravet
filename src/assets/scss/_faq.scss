@@ -5,6 +5,9 @@
     clear: both;
 }
 .card-content {
+    &.faq-content {
+        padding-left: 0;
+    }
     .faq-title {
         line-height: 2.2;;
     }
@@ -48,6 +51,7 @@
     font-size: 15px !important; 
     position: relative;
     opacity: .8;
+    width: 100%;
     &:hover, &:focus {
         opacity: .5;
     }
@@ -68,4 +72,5 @@
 .accordion-content {
     display: none;
     padding: 0 .5rem;
+    margin-bottom: 2rem;
 }

@@ -17,6 +17,6 @@
     </div>
     <div class="media-content">
         <h3 class="title is-size-6 has-text-grey"><?php the_title(); ?></h3>
-        <?php the_excerpt(); ?>
+        <?php nl2br(the_excerpt()); ?>
     </div>
 </article>

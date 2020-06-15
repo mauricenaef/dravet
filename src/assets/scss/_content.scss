@@ -5,6 +5,9 @@
     }
     .blocks-gallery-grid {
         margin-left: 0;
+        &.card-content {
+            padding-left: 0;
+        }
     }
     p a[href$=".pdf"] {
         &::before {

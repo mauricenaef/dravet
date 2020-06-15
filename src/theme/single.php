@@ -15,7 +15,7 @@ $featured_image_alt = get_post_meta($featured_image, '_wp_attachment_image_alt',
 
 
 get_header(); ?>
-<?php if( !empty($featured_image) && ( ! has_category(array('jahresberichte', 'newsletter', 'rapports-annuels', 'newsletter-fr'))) ): ?>
+<?php if( !empty($featured_image) && ( ! has_category(array('jahresberichte', 'newsletter', 'rapports-annuels', 'newsletter-fr', 'events', 'evenements'))) ): ?>
 		<figure <?php post_class('featured-image');?>>
 			<img <?php dravet_responsive_image($featured_image, $featured_image_size,'1260px'); ?><?php echo 'alt="' . $featured_image_alt . '"';?> />
 		</figure>

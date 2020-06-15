@@ -244,7 +244,7 @@ function faq_custom_shortcode( $atts ) {
 	if ( $custom_query->have_posts() ) {
 
 		// Open div wrapper around loop
-		$output .= '<div class="card-content">';
+		$output .= '<div class="card-content faq-content">';
 
 		// Loop through posts
 		while ( $custom_query->have_posts() ) {

@@ -92,7 +92,6 @@ padding: 10px 20px;
 }
 body .woocommerce table.shop_table td { padding: 15px; }
 body .woocommerce-checkout table.shop_table td { width:50%;
-text-align: right;
 border-right: 1px solid #e6e6e6; border-top: 0; }
 body .woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
     width: 100%;
@@ -125,4 +124,91 @@ body .woocommerce-page form .form-row-last { width: 49%; }
         list-style-type: none;
         margin-left: 0;
     }
+}
+
+.actions {
+    .coupon {
+        display: flex;
+        #coupon_code {
+            flex: 1;
+            width: auto;
+        }
+    }
+}
+
+.wc-proceed-to-checkout {
+    text-align: right !important;
+}
+.checkout-button.button.wc-forward, #add_payment_method a.checkout-button {
+    display: inline-block !important;
+    font-size: .9rem !important;
+}
+
+.woocommerce-error {
+    margin-left: 0 !important;
+}
+
+ol.flex-control-nav.flex-control-thumbs {
+    margin-top: .2rem;
+    li {
+        padding: .2rem;
+    }
+}
+
+.stock.in-stock {
+    margin-bottom: 0.8rem;
+    padding: .2em .75em;
+    background-color: $green;
+    color: $white;
+    display: inline-block;
+    border-radius: 100px;
+    font-size: 0.7rem;
+}
+
+
+.woocommerce-form-login {
+    .form-row:not(.woocommerce-form) {
+        display: flex;
+        align-items: center;
+        .woocommerce-form__label.woocommerce-form__label-for-checkbox {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            .woocommerce-form__input {
+                width: 2rem;
+            }
+            span {
+                width: auto;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    min-height: 2.3rem;
+}
+
+.woocommerce-mini-cart__total {
+    margin-bottom: 0.9rem;
+}
+
+.woocommerce form .show-password-input, .woocommerce-page form .show-password-input {
+    right: 1.3em !important;
+    top: 0.4em !important;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+    padding: 0.6rem 1.1rem !important;
+    border-radius: 100px;
+    border: 1px solid lightgray !important;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    margin-top: 1rem !important;
+    border-radius: 100px !important;
 }
