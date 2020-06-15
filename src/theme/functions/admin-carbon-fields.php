@@ -361,7 +361,7 @@ function custom_carbon_fields_front_page() {
     //->set_description( __( 'A simple block consisting of a heading, an image and a text content.' ) )
     ->set_render_callback( function ( $block ) {
         ?>
-        <div id="card-content" class="block">
+        <div id="card-content" class="card-content block">
         <?php
         foreach ($block['crb_slider'] as $item): 
         ?>        
