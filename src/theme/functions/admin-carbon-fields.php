@@ -263,7 +263,7 @@ function custom_carbon_fields_front_page() {
                 <?php } ?>
                 <div class="card-content">
                     <div class="media-content">
-                        <?php if($block['url_link']['url'] ) { ?>
+                        <?php if($block['url_link'] ) { ?>
                             <a href="<?php echo esc_html( $block['url_link']['url'] ); ?>" <?php echo ( $block['url_link']['blank'] ? ' target="_blank"' : '') ?> class="title is-spaced is-6"><?php  echo esc_html( $block['title'] ); ?></a>
                         <?php } else { ?>
                             <p class="title is-6"><?php  echo esc_html( $block['title'] ); ?></p>
@@ -361,7 +361,7 @@ function custom_carbon_fields_front_page() {
     //->set_description( __( 'A simple block consisting of a heading, an image and a text content.' ) )
     ->set_render_callback( function ( $block ) {
         ?>
-        <div id="card-content" class="card-content block">
+        <div id="card-content" class="card-content blocks-gallery-grid block">
         <?php
         foreach ($block['crb_slider'] as $item): 
         ?>        
