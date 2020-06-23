@@ -15,7 +15,8 @@ register_nav_menus(
 		'footer-4' => __( 'Fusszeile 4', 'dravet' ),
 		'footer-5' => __( 'Fusszeile 5', 'dravet' ),
 		'footer-6' => __( 'Fusszeile 6', 'dravet' ),
-		'footer-7' => __( 'Fusszeile 7', 'dravet' ),
+        'footer-7' => __( 'Fusszeile 7', 'dravet' ),
+        'footer-8' => __( 'Fusszeile 8 Sprachen', 'dravet' ),
 		'quicklinks' => __( 'Quicklinks', 'dravet' ),
 	) 
 );

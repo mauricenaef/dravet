@@ -78,6 +78,13 @@
 				?>
 				<br />
 				<?php
+					wp_nav_menu( array(
+						'menu_class'     => 'footer-nav menu vertical',
+						'theme_location' => 'footer-8',
+					) );
+				?>
+				<br />
+				<?php
 					$lang = pll_current_language();
 					echo wpautop( carbon_get_theme_option('footer_content_' . $lang ) ); 
 				?>
