@@ -46,7 +46,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 
     // Cards Header image
-    add_image_size( 'card-header', 300, 180, true );
+    add_image_size( 'card-header', 600, 360, true );
 
   }
 
