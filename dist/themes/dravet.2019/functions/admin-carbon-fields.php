@@ -10,7 +10,7 @@ use Carbon_Fields\Block;
 // Google Maps API
 add_filter( 'carbon_fields_map_field_api_key', 'crb_get_gmaps_api_key' );
 function crb_get_gmaps_api_key( $current_key ) {
-    return 'AIzaSyBsE4wOcG-u2BABQOBFOgOi2NeVymBKyEk';
+    return 'AIzaSyA00G0NzDtOzdQRcQc6QRdo5u7lyj7Yz7I';
     //return '';
 }
 
@@ -70,7 +70,6 @@ function custom_carbon_fields_front_page() {
         ->set_attribute( 'placeholder', 'Datum und Uhrzeit Event Start' )
         ->set_storage_format( 'U' )
         ->set_input_format( 'j. F Y G:i', 'j. F Y G:i' ),
-        ->set_time_format( 'j. F Y G:i', 'j. F Y G:i' ),
         Field::make('checkbox', 'crb_full_day_event', __('Ganztages Anlass') )
         ->set_help_text( __( 'Setze das Häcken wenn es ein Ganztages Anlass ist' ) ),
         Field::make( 'map', 'crb_company_location', __( 'Location' ) )
