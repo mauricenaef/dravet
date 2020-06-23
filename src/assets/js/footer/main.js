@@ -3,6 +3,13 @@
 		document.documentElement.style.setProperty('--vh', `${window.innerHeight/100}px`);
 	});
 
+	  const shippinginput = $('#ship-to-different-address-checkbox');
+	  shippinginput.on( 'change', function() {
+		$( 'div.shipping_address' ).hide();
+		if ( $( this ).is( ':checked' ) ) {
+			$( 'div.shipping_address' ).slideDown();
+		}
+	  } );
 
 	const header = $('.site-header');
 
@@ -87,7 +94,6 @@ $( document ).ready(function() {
 			$sticky.css({position: 'absolute', top: 'initial'});
 		}
 	  });
-  
 	}
   });  
 })( jQuery );

@@ -97,8 +97,9 @@
 				?>
 				<img src="<?php echo $logo_url; ?>">
 			</div>
-			<div class="column  is-marginless-mobile">
+			<div class="column  is-marginless-mobile credits">
 				<p class="is-small has-text-centered-mobile"><?php echo carbon_get_theme_option('footer_content_credits_' . $lang) ?></p>
+				<a href="https://mauricenaef.ch" rel="noreferrer" class="credits-logo" title="Webdesign by mauricenaef.ch" target="_blank"><img src="https://mauricenaef.ch/externaldata/logo_icon.svg" width="24" height="24" title="Web Design by MAURICE NAEF webdesign" alt="Web Design by MAURICE NAEF webdesign" /></a>
 			</div>
 	</div>	
 </footer>

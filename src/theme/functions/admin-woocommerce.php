@@ -179,3 +179,27 @@ function woo_cart_but_icon ( $items, $args ) {
   return $items;
 
 }
+
+
+function new_orders_columns( $columns = array() ) {
+
+  // Hide the columns
+  if( isset($columns['order-total']) ) {
+      // Unsets the columns which you want to hide
+      //unset( $columns['order-number'] );
+      //unset( $columns['order-date'] );
+      unset( $columns['order-status'] );
+      //unset( $columns['order-total'] );
+      //unset( $columns['order-actions'] );
+  }
+
+  // Add new columns
+  /* $columns['order-number'] = __( 'Reserva', 'Text Domain' );
+  $columns['reservation-date'] = __( 'Para el día', 'Text Domain' );
+  $columns['reservation-people'] = __( 'Seréis', 'Text Domain' );
+  $columns['order-status'] = __( 'Estado de la reserva', 'Text Domain' );
+  $columns['order-actions'] = __( '&nbsp;', 'Text Domain' ); */
+
+  return $columns;
+}
+add_filter( 'woocommerce_account_orders_columns', 'new_orders_columns' );

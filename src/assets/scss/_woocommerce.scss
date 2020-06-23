@@ -37,6 +37,7 @@
 
 .single-product {
     .cart {
+        display: flex;
         margin-top: 1rem;
         input[type=number] {
             line-height: 2.8;
@@ -156,9 +157,12 @@ ol.flex-control-nav.flex-control-thumbs {
 }
 
 .stock.in-stock {
+    margin-top: .5rem;
     margin-bottom: 0.8rem;
-    padding: .2em .75em;
-    background-color: $green;
+    body:not( .single ) & {
+        padding: .2em .75em;
+        background-color: $green;
+    }
     color: $white;
     display: inline-block;
     border-radius: 100px;
@@ -207,8 +211,38 @@ ol.flex-control-nav.flex-control-thumbs {
     border-radius: 100px;
     border: 1px solid lightgray !important;
 }
+body:not( .single ) {
 
-.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
-    margin-top: 1rem !important;
-    border-radius: 100px !important;
+    .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+        margin-top: 1rem !important;
+        border-radius: 100px !important;
+    }
+}
+
+.product-gallery__image {
+    padding: 0.2em;
+}
+
+.single {
+
+    .wp-block-button__link, .woocommerce a.button, .wp-block-woocommerce-cart .wc-block-components-button, button[type="button"].wc-block-components-checkout-place-order-button {
+        padding-top: 0;
+    }
+}
+
+.woocommerce-additional-fields {
+    display: none;
+}
+
+.woocommerce-form-row--wide {
+    label {
+        min-width: 20rem;
+    }
+    > span {
+        flex: 1;
+    }
+}
+
+.woocommerce-billing-fields {
+    width: 100%;
 }

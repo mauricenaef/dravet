@@ -120,6 +120,8 @@ function custom_override_checkout_fields( $fields ) {
 
 
 	unset($fields['billing']['billing_company']);
+	unset($fields['order']['order_comments']);
+	unset($fields['billing']['billing_address_2']);
 
 	return $fields;
 }
