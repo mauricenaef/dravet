@@ -28,12 +28,16 @@
         $last_name = get_user_meta( $user_id->ID, 'last_name', true);
         $funktion_de = get_user_meta( $user_id->ID, '_profil_funktion_de', true);
         $bio = get_user_meta( $user_id->ID, 'description', true);
+        $user_info = get_userdata($user_id->ID);
+        $email = $user_info->user_email;
 
         $output .= '<div class="card_quer">';
         $output .= '<div class="media"><div class="media-left"><figure class="image is-96x96"><img src="' . $avatar[0]  . ' " class="is-rounded" /></figure></div>';
         $output .= '<div class="media-content"><div class="field">';
+        $output .= '<a href="mailto:' . $email . '">';
         $output .= '<p class="title is-5">' . $fist_name . '  ' . $last_name . '</p>';
         $output .= '<p class="subtitle is-6">' . $funktion_de. '</p>';
+        $output .= '</a>';
         $output .= '</div>';
         $output .= '<div class="content">' . $bio . '</div>';
         $output .= '</div></div></div>';

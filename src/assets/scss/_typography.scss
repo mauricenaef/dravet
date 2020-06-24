@@ -33,6 +33,10 @@ p.title {
     margin-bottom: 0;
 }
 
+h3 + h4 {
+    margin-top: -.75rem  !important
+}
+
 .round {
     border-radius: 20000px;
 }

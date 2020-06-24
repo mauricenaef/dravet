@@ -166,9 +166,9 @@ function dravet_faq( $datahash = null ) {
                 <div class="cell small-10 medium-5 large-4 medium-offset-pull-1">
                     <div class="card testimonial-card faq-card shadow">
                         
-                        <div class="card-content shadow is-clearfix">
-							<h4 class="faq-title is-inline is-pulled-left"><strong><?php _e('Häufige Fragen:', 'dravet'); ?></strong></h4>
-							<div class="is-primary is-pulled-right">
+                        <div class="card-content faq-content shadow is-clearfix">
+							<h4 class="faq-title is-inline is-pulled-left"><strong><?php _e('Häufige Fragen', 'dravet'); ?></strong></h4>
+							<div class="is-primary is-pulled-right faq-select">
 							<?php 
 							// Create and display the dropdown menu.
 							wp_dropdown_categories(

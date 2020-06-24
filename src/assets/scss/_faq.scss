@@ -4,6 +4,19 @@
     margin-top: 3rem;
     clear: both;
 }
+.faq-title {
+    padding-left: 2rem !important;
+}
+.faq-select {
+    margin-top: .3rem;
+    select {
+        border: none;
+        background-color: $primary;
+        color: $white;
+        border-radius: 100px;
+        padding: .2rem .7rem;
+    }
+}
 .card-content {
     &.faq-content {
         padding-left: 0;
