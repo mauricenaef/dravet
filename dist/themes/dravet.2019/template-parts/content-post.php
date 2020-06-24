@@ -31,7 +31,7 @@ $attachment = carbon_get_the_post_meta( 'attachments' );
 				<?php 
 				
 				
-				if( in_category('events', 'evenements') ) {
+				if( has_category(array('events', 'evenements')) ) {
 					
 					$event_date = carbon_get_the_post_meta( 'crb_event_start_date' );
 					$fullday = carbon_get_the_post_meta( 'crb_full_day_event' );
