@@ -1643,7 +1643,7 @@ aside .members-login-form .login-remember{margin-bottom:1rem}
 .faq-select select{border:0;background-color:#383767;color:white;border-radius:100px;padding:.2rem .7rem}
 .card-content{visibility:visible;opacity:1;clear:both}
 .card-content.faq-content{padding-left:0}
-.card-content .faq-title{line-height:2.2}
+.card-content .faq-title{line-height:2.2;padding-left:2rem}
 .card-content.fadeout{visibility:hidden;opacity:0;-webkit-transition:visibility 0s 600ms,opacity 600ms fade-in-out;transition:visibility 0s 600ms,opacity 600ms fade-in-out}
 .card-content .loading-container{position:absolute;width:100%;height:100%;top:0;left:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background:white;z-index:1000;visibility:visible;opacity:1}
 .card-content .loading-container img{opacity:.5}
