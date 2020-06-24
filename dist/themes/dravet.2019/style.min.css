@@ -1621,9 +1621,9 @@ aside .members-login-form .login-remember{margin-bottom:1rem}
 .ginput_container input,.ginput_container select,.ginput_container textarea,.woocommerce-form input,.woocommerce-form select,.woocommerce-form textarea{width:100%}
 .ginput_container input,.ginput_container textarea,.woocommerce-form input,.woocommerce-form textarea{margin:0;border:1px solid #383767;padding:.25em .75em !important;margin:0 -0.35em !important}
 .ginput_container input:focus,.ginput_container textarea:focus,.woocommerce-form input:focus,.woocommerce-form textarea:focus{outline:none !important;border-color:#5a8a38 !important}
-.ginput_container .gf_login_links,.woocommerce-form .gf_login_links{margin-bottom:1rem}
-.ginput_container .gf_login_links a:first-of-type,.woocommerce-form .gf_login_links a:first-of-type{display:none}
 .ginput_container .gform_button,.woocommerce-form .gform_button{border-radius:100px}
+.gf_login_links{margin-bottom:1rem}
+.gf_login_links a:first-of-type{display:none}
 .searchform .control{max-width:400px}
 .searchform .input-wrap{display:-webkit-box;display:-ms-flexbox;display:flex}
 .searchform .input{border-radius:100px 0 0 100px;padding-left:1.4em}

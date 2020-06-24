@@ -78,3 +78,11 @@ function crb_attach_theme_options() {
         ) );
 } */
 
+add_action( 'pre_user_query', 'my_random_user_query' );
+
+function my_random_user_query( $class ) {
+    if( 'rand' == $class->query_vars['orderby'] )
+        $class->query_orderby = str_replace( 'user_login', 'RAND()', $class->query_orderby );
+
+    return $class;
+}

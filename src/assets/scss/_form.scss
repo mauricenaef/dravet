@@ -31,14 +31,16 @@
             border-color: $green !important;
         }
     }
-    .gf_login_links {
-        margin-bottom: 1rem;
-        a:first-of-type {
-            display: none;
-        }
-    }
+    
     .gform_button {
         border-radius: 100px;
+    }
+}
+
+.gf_login_links {
+    margin-bottom: 1rem;
+    a:first-of-type {
+        display: none;
     }
 }
 

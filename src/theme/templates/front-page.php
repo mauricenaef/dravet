@@ -171,9 +171,10 @@ $archive_url = carbon_get_the_post_meta('news_link');
                 <?php 
                     $args_users = array(
                         'role'    => 'Vorstand',
-                        'meta_key'   => 'menu_order',
-                        'orderby' => 'meta_value_num',
-                        'order'   => 'ASC'
+                        //'meta_key'   => 'menu_order',
+                        //'orderby' => 'meta_value_num',
+                        'orderby' => 'rand',
+                        'order'   => 'DESC'
                     );
                     $users = get_users( $args_users );
 
@@ -193,8 +194,10 @@ $archive_url = carbon_get_the_post_meta('news_link');
                                         <?php echo wp_get_attachment_image( $profilbild, array('100', '100'), false, array( 'class' => 'round' ) ); ?>
                                     </div>
                                     <div class="card-content">
-                                        <h3 class="title is-size-6"><?php echo esc_html( $user->display_name ); ?></h3>
-                                        <h4 class="subtitle is-size-7"><?php echo $funktion; ?></h4>
+                                        <a href="<?php echo get_permalink( get_page_by_title( __('Team', 'dravet') ) ); ?>">
+                                            <h3 class="title is-size-6"><?php echo esc_html( $user->display_name ); ?></h3>
+                                            <h4 class="subtitle is-size-7"><?php echo $funktion; ?></h4>
+                                        </a>
                                         
                                     </div>
                                 </li>
