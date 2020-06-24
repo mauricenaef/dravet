@@ -246,3 +246,7 @@ body:not( .single ) {
 .woocommerce-billing-fields {
     width: 100%;
 }
+
+.woocommerce-product-gallery__wrapper > div {
+    padding: .2rem;
+}
