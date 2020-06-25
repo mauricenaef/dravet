@@ -171,9 +171,8 @@ $archive_url = carbon_get_the_post_meta('news_link');
                 <?php 
                     $args_users = array(
                         'role'    => 'Vorstand',
-                        //'meta_key'   => 'menu_order',
-                        //'orderby' => 'meta_value_num',
-                        'orderby' => 'rand',
+                        'meta_key'   => 'menu_order',
+                        'orderby' => 'meta_value_num',
                         'order'   => 'DESC'
                     );
                     $users = get_users( $args_users );
