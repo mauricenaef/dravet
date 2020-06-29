@@ -16,7 +16,7 @@
 	<main id="main" class="site-main is-12 column" role="main">
 		
 			<header class="entry-header">
-			<h1 class="title is-1 entry-title">News & Events</h1>
+			<h1 class="title is-1 entry-title"><?php _e('News & Events', 'dravet') ?></h1>
 				
 			</header><!-- .entry-header -->
 			<div class="archives card_wrap">

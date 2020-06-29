@@ -20,6 +20,15 @@
 	<meta name="author" content="MAURICE NAEF webdesign" />
 	<meta name="Copyright" content="Copyright <?php echo date('Y') ?>, alle Rechte vorbehalten | Konzept, Design und Umsetzung von MAURICE NAEF webdesign, https://mauricenaef.ch" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php bloginfo('url') ?>/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('url') ?>/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('url') ?>/icons/favicon-16x16.png">
+	<link rel="manifest" href="<?php bloginfo('url') ?>/icons/site.webmanifest">
+	<link rel="mask-icon" href="<?php bloginfo('url') ?>/icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="<?php bloginfo('url') ?>/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#5a8a38">
+	<meta name="msapplication-config" content="/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
 	<?php wp_head(); ?>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide" ></script>
 </head>
